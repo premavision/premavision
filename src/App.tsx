@@ -406,32 +406,34 @@ const HomePage = ({ navigate }: PageProps) => {
         </div>
       </Section>
 
-      <Section className="bg-slate-50 dark:bg-slate-900/50 relative overflow-hidden">
-         {/* Abstract background with charts/graphs */}
-        <div className="absolute inset-0 opacity-10 dark:opacity-5 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center pointer-events-none"></div>
+      <Section className="bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 relative overflow-hidden">
+         {/* Subtle pattern background */}
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center pointer-events-none"></div>
+        {/* Gradient overlay for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-cyan-50/20 dark:from-blue-950/20 dark:via-transparent dark:to-cyan-950/10 pointer-events-none"></div>
         
         <div className="lg:flex lg:items-center lg:justify-between relative z-10">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
-            <h2 className="text-3xl font-extrabold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
                <GradientText>Outcomes, not buzzwords.</GradientText>
             </h2>
-            <p className="text-lg text-slate-500 dark:text-slate-400 mb-6">
+            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               No endless discovery docs. We ship small, scoped phases with clear deliverables obsessed with performance and reliability.
             </p>
-            <Button variant="outline" onClick={() => navigate('about')}>How we work</Button>
+            <Button variant="outline" onClick={() => navigate('about')} className="border-slate-300 hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:hover:border-slate-600 dark:hover:bg-slate-800 dark:text-slate-200">How we work</Button>
           </div>
-          <div className="lg:w-5/12 space-y-6">
+          <div className="lg:w-5/12 space-y-4">
             {CONTENT.home.outcomes.map((outcome, idx) => (
-              <div key={idx} className="flex p-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-lg shadow-sm border border-slate-100 dark:border-slate-700/50">
+              <div key={idx} className="group flex p-5 bg-white dark:bg-slate-800/95 backdrop-blur-sm rounded-xl shadow-md hover:shadow-xl border border-slate-200 dark:border-slate-700/80 transition-all duration-300 hover:border-slate-300 dark:hover:border-slate-600 dark:hover:bg-slate-800">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-slate-100 dark:bg-slate-700">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-700/80 dark:to-slate-800/80 shadow-sm group-hover:shadow-md transition-shadow border border-slate-200/50 dark:border-slate-600/50">
                     {/* Dynamic color application */}
-                    <CheckCircle className={`w-6 h-6 ${outcome.color}`} />
+                    <CheckCircle className={`w-6 h-6 ${outcome.color} drop-shadow-sm`} />
                   </div>
                 </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-slate-900 dark:text-white">{outcome.title}</h3>
-                  <p className="mt-1 text-slate-500 dark:text-slate-400">{outcome.desc}</p>
+                <div className="ml-4 flex-1">
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1.5">{outcome.title}</h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{outcome.desc}</p>
                 </div>
               </div>
             ))}
@@ -824,7 +826,7 @@ const ContactPage = () => {
             
             <div className="space-y-6">
               <div className="flex items-center text-slate-600 dark:text-slate-300">
-                <Mail className="w-6 h-6 mr-4 text-slate-400" />
+                <Mail className="w-6 h-6 mr-4 text-slate-400 flex-shrink-0" />
                 <a href={`mailto:${CONTENT.company.email}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   {CONTENT.company.email}
                 </a>
@@ -886,7 +888,7 @@ const ContactPage = () => {
               </div>
             )}
 
-            <Button className="w-full" disabled={status === 'submitting'}>
+            <Button type="submit" className="w-full" disabled={status === 'submitting'}>
               {status === 'submitting' ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
@@ -1034,7 +1036,7 @@ const Footer = ({ navigate }: FooterProps) => (
           <h3 className="text-sm font-semibold text-slate-900 dark:text-white tracking-wider uppercase mb-4">Contact</h3>
           <ul className="space-y-3">
             <li className="flex items-center text-slate-500 dark:text-slate-400">
-               <Mail className="w-4 h-4 mr-2" /> 
+               <Mail className="w-4 h-4 mr-2 flex-shrink-0" /> 
                <a href={`mailto:${CONTENT.company.email}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                  {CONTENT.company.email}
                </a>
@@ -1060,14 +1062,7 @@ const Footer = ({ navigate }: FooterProps) => (
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    // Check system preference on load
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setIsDark(true);
-    }
-  }, []);
+  const [isDark, setIsDark] = useState(true);
 
   const navigate = (pageId: string) => {
     setCurrentPage(pageId);
