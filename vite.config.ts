@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist',
+    // Output to "docs" instead of default "dist" (useful for GitHub Pages)
+    outDir: 'docs',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'esbuild',
