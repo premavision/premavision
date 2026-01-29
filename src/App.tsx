@@ -840,7 +840,7 @@ const ContactPage = () => {
             <div className="mt-12 p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
               <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Response Time</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm">
-                We respect your time. Expect a clear Yes/No or booking link within 48 hours. Please provide as much context as possible in the project brief.
+                We respect your time. Expect a clear Yes/No or booking link within 24 hours. Please provide as much context as possible in the project brief.
               </p>
             </div>
           </div>
