@@ -847,27 +847,67 @@ async function submitQuoteForm(formData: {
 const ContactPage = () => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
+  
+  // Form field states for prefilling from URL params
+  const [formValues, setFormValues] = useState({
+    name: '',
+    email: '',
+    company: '',
+    budget: '',
+    brief: '',
+    source: ''
+  });
+
+  // Parse URL query parameters and prefill form on mount
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const params: any = {};
+    
+    // Map query params to form fields
+    if (urlParams.has('name')) params.name = urlParams.get('name') || '';
+    if (urlParams.has('email')) params.email = urlParams.get('email') || '';
+    if (urlParams.has('company')) params.company = urlParams.get('company') || '';
+    if (urlParams.has('budget')) params.budget = urlParams.get('budget') || '';
+    if (urlParams.has('brief') || urlParams.has('message')) {
+      params.brief = urlParams.get('brief') || urlParams.get('message') || '';
+    }
+    if (urlParams.has('source') || urlParams.has('utm_source')) {
+      params.source = urlParams.get('source') || urlParams.get('utm_source') || '';
+    }
+    
+    // Only update if there are params
+    if (Object.keys(params).length > 0) {
+      setFormValues(prev => ({ ...prev, ...params }));
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('submitting');
     setErrorMessage('');
 
-    const form = e.currentTarget;
     const formData = {
-      name: (form.querySelector('#name') as HTMLInputElement).value,
-      email: (form.querySelector('#email') as HTMLInputElement).value,
-      company: (form.querySelector('#company') as HTMLInputElement).value || '',
-      budgetRange: (form.querySelector('#budget') as HTMLSelectElement).value,
-      projectBrief: (form.querySelector('#brief') as HTMLTextAreaElement).value,
-      howFound: (form.querySelector('#source') as HTMLInputElement).value || ''
+      name: formValues.name,
+      email: formValues.email,
+      company: formValues.company,
+      budgetRange: formValues.budget,
+      projectBrief: formValues.brief,
+      howFound: formValues.source
     };
 
     const result = await submitQuoteForm(formData);
 
     if (result.success) {
       setStatus('success');
-      form.reset();
+      // Reset form values
+      setFormValues({
+        name: '',
+        email: '',
+        company: '',
+        budget: '',
+        brief: '',
+        source: ''
+      });
     } else {
       setStatus('error');
       setErrorMessage(result.error || 'Failed to submit form. Please try again.');
@@ -927,22 +967,48 @@ const ContactPage = () => {
           <form onSubmit={handleSubmit} className="space-y-6 bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Name</label>
-              <input required type="text" id="name" className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" />
+              <input 
+                required 
+                type="text" 
+                id="name" 
+                value={formValues.name}
+                onChange={(e) => setFormValues(prev => ({ ...prev, name: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" 
+              />
             </div>
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Work Email</label>
-              <input required type="email" id="email" className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" />
+              <input 
+                required 
+                type="email" 
+                id="email" 
+                value={formValues.email}
+                onChange={(e) => setFormValues(prev => ({ ...prev, email: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" 
+              />
             </div>
 
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Company</label>
-              <input type="text" id="company" className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" />
+              <input 
+                type="text" 
+                id="company" 
+                value={formValues.company}
+                onChange={(e) => setFormValues(prev => ({ ...prev, company: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" 
+              />
             </div>
 
             <div>
               <label htmlFor="budget" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Budget Range</label>
-              <select id="budget" required className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border">
+              <select 
+                id="budget" 
+                required 
+                value={formValues.budget}
+                onChange={(e) => setFormValues(prev => ({ ...prev, budget: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border"
+              >
                 <option value="">Select a range...</option>
                 <option value="&lt; $5k (Audit/Small Fix)">&lt; $5k (Audit/Small Fix)</option>
                 <option value="$5k – $15k">$5k – $15k</option>
@@ -953,12 +1019,28 @@ const ContactPage = () => {
 
             <div>
               <label htmlFor="brief" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Project Brief</label>
-              <textarea required id="brief" name="brief" rows={4} className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" placeholder="What are you trying to build or fix?"></textarea>
+              <textarea 
+                required 
+                id="brief" 
+                name="brief" 
+                rows={4} 
+                value={formValues.brief}
+                onChange={(e) => setFormValues(prev => ({ ...prev, brief: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" 
+                placeholder="What are you trying to build or fix?"
+              ></textarea>
             </div>
 
             <div>
                <label htmlFor="source" className="block text-sm font-medium text-slate-700 dark:text-slate-300">How did you find us?</label>
-               <input type="text" id="source" name="source" className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" />
+               <input 
+                 type="text" 
+                 id="source" 
+                 name="source" 
+                 value={formValues.source}
+                 onChange={(e) => setFormValues(prev => ({ ...prev, source: e.target.value }))}
+                 className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" 
+               />
             </div>
 
             {status === 'error' && errorMessage && (
