@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Prema Vision</title>
+  <script>
+    // GitHub Pages SPA redirect trick for History API routing
+    // This allows clean URLs like /services to work on GitHub Pages
+    // 
+    // How it works:
+    // 1. User visits premavision.net/services
+    // 2. GitHub Pages doesn't find /services/index.html, returns this 404.html
+    // 3. This script captures the path and redirects to root with the path preserved
+    // 4. Our React app reads the path and renders the correct page
+    
+    (function() {
+      var path = window.location.pathname;
+      if (path && path !== '/') {
+        // Redirect to root, preserving the path via History API
+        window.location.replace(
+          window.location.origin + 
+          '?redirect=' + encodeURIComponent(path + window.location.search + window.location.hash)
+        );
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p style="text-align: center; margin-top: 50px; font-family: sans-serif; color: #666;">
+    Redirecting...
+  </p>
+</body>
+</html>

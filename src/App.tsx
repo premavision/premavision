@@ -9,6 +9,85 @@ import {
  * PREMA VISION LLC - WEBSITE CONTENT CONFIGURATION
  * * Edit this section to update site text without touching the UI code.
  */
+
+// SEO metadata for each page
+const PAGE_SEO = {
+  home: {
+    title: "Prema Vision - AI Automation & Cloud Engineering That Ships",
+    description: "Boutique AI automation and cloud engineering studio. We build AI agents, modern backends, and DevOps pipelines that deliver real business outcomes.",
+    keywords: "AI automation, cloud engineering, DevOps, backend development, AI agents"
+  },
+  services: {
+    title: "Services - AI Automation, Backend & DevOps | Prema Vision",
+    description: "Expert AI automation, backend engineering, DevOps, and cloud infrastructure services. RAG pipelines, microservices, Kubernetes, and modern APIs.",
+    keywords: "AI services, backend development, DevOps consulting, cloud infrastructure, microservices"
+  },
+  cases: {
+    title: "Case Studies - Real Projects & Results | Prema Vision",
+    description: "See how we've helped companies modernize billing systems, implement AI documentation, and build reliable infrastructure. Real problems, pragmatic solutions.",
+    keywords: "case studies, portfolio, success stories, AI projects, infrastructure projects"
+  },
+  about: {
+    title: "About - Engineering Excellence & Philosophy | Prema Vision",
+    description: "Learn about our engineering philosophy and founder Denys Korolkov. Principal-level engineering focused on shipping real solutions, not just POCs.",
+    keywords: "about us, engineering team, Denys Korolkov, company philosophy"
+  },
+  contact: {
+    title: "Contact Us - Let's Talk Engineering | Prema Vision",
+    description: "Ready to build AI automation or modernize your infrastructure? Get in touch for a free consultation. We respond within 24 hours.",
+    keywords: "contact, consultation, quote, hire engineers, AI consulting"
+  }
+};
+
+// Helper function to update page meta tags for SEO
+function updatePageMeta(pageId: keyof typeof PAGE_SEO) {
+  const seo = PAGE_SEO[pageId];
+  
+  // Update title
+  document.title = seo.title;
+  
+  // Update or create meta tags
+  const updateMetaTag = (property: string, content: string, isProperty = false) => {
+    const attribute = isProperty ? 'property' : 'name';
+    let element = document.querySelector(`meta[${attribute}="${property}"]`) as HTMLMetaElement;
+    if (!element) {
+      element = document.createElement('meta');
+      element.setAttribute(attribute, property);
+      document.head.appendChild(element);
+    }
+    element.setAttribute('content', content);
+  };
+  
+  // Update standard meta tags
+  updateMetaTag('description', seo.description);
+  updateMetaTag('keywords', seo.keywords);
+  updateMetaTag('title', seo.title);
+  
+  // Build clean URL (with History API, no hash)
+  const pageUrl = pageId === 'home' 
+    ? 'https://premavision.net/' 
+    : `https://premavision.net/${pageId}`;
+  
+  // Update Open Graph tags
+  updateMetaTag('og:title', seo.title, true);
+  updateMetaTag('og:description', seo.description, true);
+  updateMetaTag('og:url', pageUrl, true);
+  
+  // Update Twitter tags
+  updateMetaTag('twitter:title', seo.title, true);
+  updateMetaTag('twitter:description', seo.description, true);
+  updateMetaTag('twitter:url', pageUrl, true);
+  
+  // Update canonical URL
+  let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', pageUrl);
+}
+
 const CONTENT = {
   company: {
     name: "Prema Vision",
@@ -1064,7 +1143,35 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [isDark, setIsDark] = useState(true);
 
+  // Initialize page from URL path on mount
+  useEffect(() => {
+    const getPageFromPath = () => {
+      const path = window.location.pathname.slice(1) || 'home'; // Remove leading '/'
+      const validPages = ['home', 'services', 'cases', 'about', 'contact'];
+      return validPages.includes(path) ? path : 'home';
+    };
+
+    setCurrentPage(getPageFromPath());
+
+    // Listen for popstate (browser back/forward buttons)
+    const handlePopState = () => {
+      setCurrentPage(getPageFromPath());
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Update meta tags when page changes
+  useEffect(() => {
+    updatePageMeta(currentPage as keyof typeof PAGE_SEO);
+  }, [currentPage]);
+
   const navigate = (pageId: string) => {
+    // Use History API for clean URLs
+    const path = pageId === 'home' ? '/' : `/${pageId}`;
+    window.history.pushState({}, '', path);
     setCurrentPage(pageId);
     window.scrollTo(0, 0);
   };

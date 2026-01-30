@@ -13,9 +13,29 @@ Deployed via **GitHub Pages** with zero-config CI.
 - **Responsive, modern UI** with Tailwind CSS  
 - **Dark theme defaults** with polished styling  
 - **Google Apps Script contact form** (serverless backend)  
-- **SEO-friendly static site** with semantic HTML  
+- **Full SEO optimization** with dynamic meta tags, structured data, and Open Graph support
+- **History API routing** with clean URLs (`/services`, `/contact`, etc.) - no hash fragments!
 - **Optimized for GitHub Pages deployment**  
 - Clean component structure ready for future expansion (blog, services, case studies)
+
+---
+
+## 🔍 SEO Features
+
+This site is fully optimized for search engines and social media:
+
+- ✅ **Dynamic Meta Tags** - Unique title, description, and keywords for each page
+- ✅ **Open Graph Tags** - Optimized previews for Facebook, LinkedIn, Twitter
+- ✅ **Structured Data** - Schema.org markup for Organization and ProfessionalService
+- ✅ **Sitemap & Robots.txt** - Properly configured for search engine crawlers
+- ✅ **Hash Routing** - SEO-friendly URLs with working browser navigation
+- ✅ **Mobile Optimized** - Fast loading and perfect mobile experience
+
+📄 **Documentation:**
+- `SEO.md` - Complete SEO setup and best practices
+- `HISTORY-API.md` - Technical deep dive on clean URL routing
+- `DEPLOY.md` - Step-by-step deployment guide
+- `SEO-CHECKLIST.md` - Quick post-deploy checklist
 
 ---
 
