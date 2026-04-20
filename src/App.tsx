@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Menu, X, ChevronRight, CheckCircle, ArrowRight, 
   Terminal, Server, Cloud, Cpu, Mail, Github, 
-  Linkedin, Moon, Sun, ArrowUpRight 
+  Linkedin, Moon, Sun 
 } from 'lucide-react';
 
 /**
@@ -13,29 +13,29 @@ import {
 // SEO metadata for each page
 const PAGE_SEO = {
   home: {
-    title: "Prema Vision - AI Automation & Cloud Engineering That Ships",
-    description: "Boutique AI automation and cloud engineering studio. We build AI agents, modern backends, and DevOps pipelines that deliver real business outcomes.",
-    keywords: "AI automation, cloud engineering, DevOps, backend development, AI agents"
+    title: "Prema Vision - LangChain and LangGraph Observability Consulting",
+    description: "LLM observability consulting for LangChain and LangGraph teams. We implement LangSmith workflows with tracing, evaluators, annotation workflows, dashboards, and alerts.",
+    keywords: "LangChain observability, LangGraph observability, LangSmith setup, LLM quality, AI evaluation"
   },
   services: {
-    title: "Services - AI Automation, Backend & DevOps | Prema Vision",
-    description: "Expert AI automation, backend engineering, DevOps, and cloud infrastructure services. RAG pipelines, microservices, Kubernetes, and modern APIs.",
-    keywords: "AI services, backend development, DevOps consulting, cloud infrastructure, microservices"
+    title: "Services for LangChain and LangGraph Teams | Prema Vision",
+    description: "Service packages for AI observability: Domain Expert Quality System, LangSmith Quick Start, targeted engineering consulting, and fractional CTO support.",
+    keywords: "LangSmith services, AI observability consulting, LLM quality system, fractional CTO"
   },
   cases: {
     title: "Case Studies - Real Projects & Results | Prema Vision",
-    description: "See how we've helped companies modernize billing systems, implement AI documentation, and build reliable infrastructure. Real problems, pragmatic solutions.",
-    keywords: "case studies, portfolio, success stories, AI projects, infrastructure projects"
+    description: "Case studies on production AI quality improvements with observability, evaluator workflows, and practical engineering interventions.",
+    keywords: "AI observability case studies, LangSmith outcomes, LLM quality improvements, evaluator workflow results"
   },
   about: {
-    title: "About - Engineering Excellence & Philosophy | Prema Vision",
-    description: "Learn about our engineering philosophy and founder Denys Korolkov. Principal-level engineering focused on shipping real solutions, not just POCs.",
-    keywords: "about us, engineering team, Denys Korolkov, company philosophy"
+    title: "Why Prema Vision Focuses on AI Observability",
+    description: "Prema Vision implements LangSmith workflows so domain experts can improve AI quality directly with clear production visibility.",
+    keywords: "AI observability, LangSmith workflows, domain expert feedback, production LLM quality"
   },
   contact: {
-    title: "Contact Us - Let's Talk Engineering | Prema Vision",
-    description: "Ready to build AI automation or modernize your infrastructure? Get in touch for a free consultation. We respond within 24 hours.",
-    keywords: "contact, consultation, quote, hire engineers, AI consulting"
+    title: "Scope Your AI Observability Gap | Prema Vision",
+    description: "Share your stack, production stage, and quality bottleneck. Get a fit/no-fit response within 24 hours.",
+    keywords: "AI observability consultation, LangChain support, LangGraph support, LangSmith diagnostic"
   }
 };
 
@@ -110,183 +110,191 @@ const CONTENT = {
   ],
   home: {
     hero: {
-      h1: "AI automation and cloud engineering that actually ships.",
+      h1: "LangChain and LangGraph observability that improves AI quality.",
       sub: (
         <>
-          We design and implement <span className="font-bold text-slate-100 dark:text-white">AI-powered workflows</span>, <span className="font-bold text-slate-100 dark:text-white">modern backend systems</span>, and <span className="font-bold text-slate-100 dark:text-white">DevOps pipelines</span> that deliver real business outcomes—not just slide decks.
+          Set up LangSmith so product, support, and sales teams improve AI quality directly, without waiting for engineering sprints.
         </>
       ),
-      primaryCta: "Book a call",
-      secondaryCta: "View case studies",
-      badges: ["Principal-level engineering", "Hands-on delivery", "Scalable systems"],
+      primaryCta: "Book observability diagnostic",
+      secondaryCta: "See service packages",
+      badges: ["Tracing in production", "Evaluator coverage", "Annotation workflows"],
       bgImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072"
     },
     pillars: [
       {
         id: 1,
-        title: "AI Automation & Agents",
-        desc: "Turn manual workflows into autonomous agents. We build RAG pipelines and custom tools that integrate seamlessly with your existing stack.",
-        items: ["Support & Ops Agents", "RAG Pipelines", "Custom Tooling"],
+        title: "Domain Expert Quality System (from $5,000)",
+        desc: "A full LangSmith quality loop where domain experts can inspect failures, annotate, and drive fixes.",
+        items: ["LangSmith project setup", "Domain evaluators and annotation flow", "Prompt Hub onboarding and quality dashboard", "Slack quality alerts"],
         image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
       },
       {
         id: 2,
-        title: "Backend & APIs",
-        desc: "Modernize legacy monoliths or build high-performance microservices from scratch. Clean, typed, and tested.",
-        items: ["Node.js & Python", "High-performance APIs", "Event-driven Systems"],
+        title: "LangSmith Quick Start (from $1,500)",
+        desc: "Fast instrumentation for teams that need visibility now and a practical baseline to improve quality.",
+        items: ["Tracing and run visibility", "Cost monitoring", "Baseline evaluators", "Production-ready in 1 week"],
         image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" 
       },
       {
         id: 3,
-        title: "DevOps & Reliability",
-        desc: "Infrastructure that sleeps when you do. We implement robust CI/CD, observability, and scalable cloud architectures.",
-        items: ["AWS & Kubernetes", "CI/CD Pipelines", "Observability Setup"],
+        title: "Engineering Consulting (targeted)",
+        desc: "Short interventions to remove one critical bottleneck without launching a broad transformation program.",
+        items: ["Legacy bottleneck diagnosis", "Critical path fix", "Monitoring and dashboards", "Short scoped interventions"],
         image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=800"
       },
       {
         id: 4,
-        title: "Integrations & DX",
-        desc: "Connect your fragmented ecosystem. We automate documentation, build internal developer platforms, and glue services together.",
-        items: ["Platform Integrations", "Docs-as-Code", "Developer Tools"],
+        title: "Fractional CTO (limited slots)",
+        desc: "Hands-on technical leadership for teams that need architecture ownership and delivery guidance.",
+        items: ["Architecture and roadmap ownership", "Team and delivery guidance", "Prototype to production support", "1-2 companies at a time"],
         image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
       }
     ],
     outcomes: [
-      { title: "Faster time-to-market", desc: "Ship features confidently with automated pipelines.", color: "text-red-500" },
-      { title: "Reduced operational toil", desc: "Let AI agents handle the repetitive Tier-1 tasks.", color: "text-yellow-500" },
-      { title: "Traffic-ready infrastructure", desc: "Systems designed to handle spikes without waking you up.", color: "text-green-500" }
+      { title: "Faster quality iteration without developer tickets", desc: "Tracing, annotation workflows, and evaluator results let non-engineering teams improve quality directly.", color: "text-red-500" },
+      { title: "Clear visibility into failures, cost, and regressions", desc: "Production runs, cost trends, and regression checks are visible in one operating dashboard.", color: "text-yellow-500" },
+      { title: "Domain experts in the loop through UI workflows", desc: "Prompt Hub and evaluator workflows turn expert feedback into repeatable quality signals.", color: "text-green-500" }
     ],
     casesTeaser: [
       {
-        title: "Modernizing billing for a global SaaS",
-        summary: "Migrated a legacy billing portal to modern React microfrontends, resulting in 100% SLA on invoice loading.",
-        tags: ["FinTech", "React", "Migration"],
+        title: "LangSmith rollout for support quality",
+        summary: "Implemented tracing, failure tagging, and evaluator baselines so support leads could iterate prompts without waiting for sprint tickets.",
+        tags: ["LangSmith", "Evaluators", "Support Ops"],
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800"
       },
       {
-        title: "AI Integrations for Event Intelligence",
-        summary: "Built AI-powered content generation for docs and automated publishing pipelines, reducing technical writing load by 50%.",
-        tags: ["AI/LLM", "Automation", "Python"],
+        title: "Regression visibility before release",
+        summary: "Added annotation workflow, prompt versioning, and Slack alerts that caught quality regressions before production rollout.",
+        tags: ["Annotation", "Prompt Hub", "Alerts"],
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800"
       }
     ]
   },
   services: {
-    intro: "For CTOs, Heads of Engineering, and Founders who need infrastructure and AI that works in the real world.",
+    intro: "For founders and CTOs who need production visibility and faster AI quality improvements without sprint bottlenecks.",
     list: [
       {
-        title: "AI Automation & Agents",
+        title: "Domain Expert Quality System (from $5,000)",
         icon: <Cpu className="w-6 h-6" />,
-        desc: "We move beyond the chat interface. We build autonomous agents that can read your internal documentation, triage tickets, and execute operations safely.",
-        useCases: ["AI Support Agents (Tier-1 Triage)", "Backoffice Operation Workflows", "Internal Knowledge RAG"],
-        deliverables: ["Agent Architecture", "Vector Database Setup", "Eval & Monitoring Pipelines"],
+        bestFor: "Teams in production with unstable output quality and delayed feedback loops.",
+        included: ["LangSmith project setup", "Domain evaluators and annotation flow", "Prompt Hub onboarding and quality dashboard", "Slack quality alerts"],
+        businessOutcome: "Quality improvements ship faster because domain teams can act on visible failures without waiting for sprint capacity.",
+        scopeCaveat: "Not a fit for teams that need a full internal platform rebuild.",
+        cta: "Book observability diagnostic",
         image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
       },
       {
-        title: "Backend & API Engineering",
+        title: "LangSmith Quick Start (from $1,500)",
         icon: <Server className="w-6 h-6" />,
-        desc: "Whether it's untangling a spaghetti monolith or building a new billing engine, we write clean, maintainable backend code designed for scale.",
-        useCases: ["Monolith to Microservices", "Billing & Checkout APIs", "High-throughput Data Ingestion"],
-        deliverables: ["Production-ready Services", "OpenAPI Documentation", "Performance Tuning Reports"],
+        bestFor: "Teams that need immediate run visibility before the next AI release.",
+        included: ["Tracing and run visibility", "Cost monitoring", "Baseline evaluators", "Production-ready in 1 week"],
+        businessOutcome: "A measurable baseline for quality and cost, with enough instrumentation to prioritize the next fixes.",
+        scopeCaveat: "Not a fit for teams expecting custom platform development in this package.",
+        cta: "Start Quick Start",
         image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
       },
       {
-        title: "DevOps, Cloud & Reliability",
+        title: "Engineering Consulting (targeted)",
         icon: <Cloud className="w-6 h-6" />,
-        desc: "Stop fearing deploy day. We build boring, reliable infrastructure on AWS and Kubernetes so you can focus on product features.",
-        useCases: ["Kubernetes Migration", "GitOps Implementation", "Cost Optimization"],
-        deliverables: ["Terraform/IaC Modules", "CI/CD Workflows", "Datadog/Prometheus Setup"],
+        bestFor: "Teams with a single high-impact bottleneck on the critical path.",
+        included: ["Legacy bottleneck diagnosis", "Critical path fix", "Monitoring and dashboards", "Short scoped interventions"],
+        businessOutcome: "One blocking issue is removed quickly with minimal disruption to roadmap delivery.",
+        scopeCaveat: "Not a fit for open-ended modernization programs.",
+        cta: "Scope targeted fix",
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
       },
       {
-        title: "Integrations & Documentation",
+        title: "Fractional CTO (limited slots)",
         icon: <Terminal className="w-6 h-6" />,
-        desc: "Great engineering needs great documentation. We automate the boring parts of developer experience and connect your isolated SaaS tools.",
-        useCases: ["API-to-Docs Pipelines", "Webhook Handling Systems", "Internal Dev Portals"],
-        deliverables: ["Automated Docs Site", "Integration Hubs", "Developer CLIs"],
+        bestFor: "Founders and engineering teams that need senior technical ownership beyond advisory calls.",
+        included: ["Architecture and roadmap ownership", "Team and delivery guidance", "Prototype to production support", "1-2 companies at a time"],
+        businessOutcome: "Execution quality improves through clear ownership, tighter technical decisions, and better delivery cadence.",
+        scopeCaveat: "Not a fit for teams seeking part-time status reporting without technical ownership.",
+        cta: "Check availability",
         image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
       }
     ],
     faq: [
-      { q: "Do you work as an individual contributor or a team?", a: "We operate as a boutique studio. Denys acts as the Principal Engineer/Architect, and for larger projects, we scale up with a trusted network of senior specialists." },
-      { q: "What is your typical engagement size?", a: "We prefer scopes that deliver value in 4-12 weeks. We avoid year-long 'transformation' roadmaps that never ship." },
-      { q: "Can you work with our existing stack?", a: "Yes. While we prefer modern stacks (Node, Python, AWS), we have deep experience navigating and modernizing legacy codebases." },
-      { q: "Do you support fixed-price projects?", a: "Yes, for well-scoped implementation phases. Discovery and vague architectural work are typically billed on a retainer or time-and-materials basis." }
+      { q: "Can this work without a large engineering sprint?", a: "Yes. We design tracing, evaluator, and annotation workflows so product, support, and domain teams can improve quality directly between releases." },
+      { q: "How long does the first useful phase take?", a: "LangSmith Quick Start is typically delivered in 1 week. Larger quality-system scopes are phased in short milestones with visible checkpoints." },
+      { q: "Can you work with our current orchestration stack?", a: "Yes. We support LangChain, LangGraph, and custom orchestration as long as runtime traces and feedback signals can be instrumented." },
+      { q: "How are engagements priced?", a: "Packages start at $1,500 for Quick Start and $5,000 for Domain Expert Quality System. Targeted consulting and fractional CTO scopes are defined after diagnostic." }
     ]
   },
   cases: [
     {
-      title: "Stabilizing Billing & Checkout Flows",
-      client: "Global SaaS Design Platform",
-      problem: "The legacy billing portal was a single point of failure. Invoice loading took 10s+, causing support spikes, and adding new pricing plans required weeks of manual database work.",
+      title: "Support AI quality loop in production",
+      client: "B2B SaaS Support Team",
+      problem: "Answer quality was unstable across high-volume support flows, but fixes depended on engineering sprint bandwidth and ad-hoc debugging.",
       approach: [
-        "Migrated the UI to modern React microfrontends embedded in the main app.",
-        "Designed a dedicated API layer for account operations to decouple from the monolith.",
-        "Implemented rigorous structured logging and observability."
+        "Implemented end-to-end LangSmith tracing with run-level metadata for intent, segment, and escalation flags.",
+        "Added baseline evaluators for answer quality, policy adherence, and handoff correctness.",
+        "Set up annotation workflow so support leads could label failures and route fixes without developer tickets."
       ],
       impact: [
-        "Achieved 100% SLA on invoice delivery and rendering.",
-        "Reduced time-to-launch for new pricing tiers from 2 weeks to 2 days.",
-        "Significantly improved LCP scores and user trust."
+        "Reduced quality-issue triage time from days to hours.",
+        "Created a shared quality dashboard used by product, support, and engineering.",
+        "Enabled weekly quality iteration with clear regression visibility."
       ],
-      stack: ["React", "Node.js", "GraphQL", "Redis"],
+      stack: ["LangChain", "LangSmith", "Prompt Hub", "Slack"],
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=800"
     },
     {
-      title: "AI-Assisted Documentation & Integrations",
-      client: "B2B Incident Intelligence Platform",
-      problem: "The company had dozens of integrations to maintain. Keeping technical documentation in sync with code changes was a manual, error-prone nightmare.",
+      title: "Cost and failure visibility for agent workflows",
+      client: "Vertical AI Product Team",
+      problem: "The team shipped multiple agent paths but lacked visibility into expensive runs, failure clusters, and prompt-level regressions.",
       approach: [
-        "Built a serverless integration pipeline to normalize data from 30+ external tools.",
-        "Implemented an AI agent to read code diffs and generate draft documentation updates.",
-        "Created a CI/CD pipeline to publish docs automatically upon merge."
+        "Instrumented tracing across orchestration nodes to expose bottlenecks and token-heavy branches.",
+        "Built cost monitoring views segmented by route, model, and user intent.",
+        "Added evaluator checks to gate prompt changes before broad rollout."
       ],
       impact: [
-        "Reduced manual documentation effort by approx. 50%.",
-        "Accelerated the launch of new 3rd-party integrations.",
-        "Ensured documentation is never more than one commit behind production."
+        "Made per-route cost drivers visible in one dashboard.",
+        "Detected regressions before customer exposure.",
+        "Improved confidence in release decisions with measurable quality signals."
       ],
-      stack: ["Python", "OpenAI API", "AWS Lambda", "Static Site Gen"],
+      stack: ["LangGraph", "LangSmith", "OpenAI", "Datadog"],
       image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&q=80&w=800"
     },
     {
-      title: "AI Workflow for Internal Operations",
-      client: "Mid-size SaaS (HealthTech)",
-      problem: "The Ops team was drowning in repetitive ticket triage and manual database lookups, leading to slow response times for critical issues.",
+      title: "Domain-expert feedback operationalized",
+      client: "HealthTech AI Operations",
+      problem: "Clinical-domain feedback existed in notes and calls, but was not operationalized into repeatable evaluator logic or release criteria.",
       approach: [
-        "Implemented a secure RAG-based assistant connected to internal Confluence and Jira.",
-        "Built 'Admin Action' tools accessible via Slack commands for safe, routine database updates.",
-        "Set up an audit log for all AI-initiated actions."
+        "Designed annotation taxonomy aligned to domain failure modes and business risk levels.",
+        "Mapped annotation outputs to evaluator rules and dashboard slices.",
+        "Added Slack alerts for high-risk quality drift and threshold breaches."
       ],
       impact: [
-        " deflected 30% of routine internal questions.",
-        "Reduced mean-time-to-resolution (MTTR) for routine operational tasks.",
-        "Allowed senior ops staff to focus on complex incidents."
+        "Turned domain feedback into an operational quality workflow.",
+        "Improved handoff clarity between product, domain experts, and engineering.",
+        "Established a repeatable release checklist tied to quality signals."
       ],
-      stack: ["LangChain", "Pinecone", "Slack Bolt SDK", "PostgreSQL"],
+      stack: ["LangChain", "LangSmith", "Slack", "PostgreSQL"],
       image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=800"
     }
   ],
   about: {
     philosophy: [
-      "Too many AI and DevOps projects die in slide decks or POC hell.",
-      "At Prema Vision, our goal is to bridge the gap between solid, boring engineering practices and the new world of pragmatic AI.",
-      "We prioritize long-term maintainability over hype. If a simple script works better than a complex agent, we build the script."
+      "Most AI teams know quality is unstable, but fixes still depend on engineering sprints.",
+      "Prema Vision implements LangSmith workflows so domain experts can improve output quality directly.",
+      "The goal is practical: faster iteration, fewer regressions, and visible quality signals in production."
     ],
     founder: {
       name: "Denys Korolkov",
-      role: "Principal Consultant & Founder",
+      role: "Founder, Principal Engineer, Fractional CTO",
       bio: [
-        "Denys is a Principal Engineer with a strong background in backend systems, full-stack architecture, and DevOps. He doesn't just draw diagrams—he writes production code.",
-        "He has helped companies modernize critical billing systems, build high-performance APIs, and implement practical AI automations that solve actual business problems.",
-        "Comfortable in the boardroom and the terminal, Denys focuses on technical precision and transparent communication."
+        "Co-founder and CTO at Structed.ai, where LangGraph agents run in production with domain-expert feedback loops.",
+        "Denys is a principal engineer who combines architecture ownership with hands-on implementation.",
+        "He focuses on practical observability systems that turn production signals into faster quality decisions."
       ]
     },
     principles: [
-      "Start small, ship early.",
-      "Prefer boring, well-understood infrastructure.",
-      "Clear communication, honest constraints.",
-      "We document as we go, not at the end."
+      "Find the weak point first",
+      "Ship targeted fixes, not transformation theater",
+      "Instrument everything that matters",
+      "Keep ownership clear across product, domain, and engineering"
     ]
   }
 };
@@ -442,7 +450,7 @@ const HomePage = ({ navigate }: PageProps) => {
               <Button onClick={() => navigate('contact')} className="shadow-xl shadow-blue-900/20">
                 {CONTENT.home.hero.primaryCta}
               </Button>
-              <Button variant="secondary" onClick={() => navigate('cases')} className="bg-white/10 text-white border-white/20 hover:bg-white/20 dark:bg-white/10 dark:text-white dark:border-white/20 dark:hover:bg-white/20 backdrop-blur-sm">
+              <Button variant="secondary" onClick={() => navigate('services')} className="bg-white/10 text-white border-white/20 hover:bg-white/20 dark:bg-white/10 dark:text-white dark:border-white/20 dark:hover:bg-white/20 backdrop-blur-sm">
                 {CONTENT.home.hero.secondaryCta}
               </Button>
             </div>
@@ -456,7 +464,7 @@ const HomePage = ({ navigate }: PageProps) => {
             <GradientText>Focused Expertise</GradientText>
           </h2>
           <p className="mt-4 text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
-            We don't do everything. We focus on high-impact backend, cloud, and AI engineering services.
+            Four offers with clear scope, delivery mechanism, and measurable quality outcomes.
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -494,10 +502,10 @@ const HomePage = ({ navigate }: PageProps) => {
         <div className="lg:flex lg:items-center lg:justify-between relative z-10">
           <div className="lg:w-1/2 mb-10 lg:mb-0">
             <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">
-               <GradientText>Outcomes, not buzzwords.</GradientText>
+               <GradientText>Fix the quality bottleneck, not just the prompt.</GradientText>
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-              No endless discovery docs. We ship small, scoped phases with clear deliverables obsessed with performance and reliability.
+              Every promise is tied to mechanism: tracing, evaluators, annotation workflows, dashboards, and alerts.
             </p>
             <Button variant="outline" onClick={() => navigate('about')} className="border-slate-300 hover:border-slate-400 hover:bg-slate-50 dark:border-slate-700 dark:hover:border-slate-600 dark:hover:bg-slate-800 dark:text-slate-200">How we work</Button>
           </div>
@@ -564,9 +572,9 @@ const HomePage = ({ navigate }: PageProps) => {
         {/* Abstract background for CTA - now visible in dark mode too */}
         <div className="absolute inset-0 opacity-20 dark:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         <div className="relative z-10 py-12 px-4">
-          <h2 className="text-3xl font-extrabold text-white mb-4">Ready to ship?</h2>
+          <h2 className="text-3xl font-extrabold text-white mb-4">Need observability before your next AI release?</h2>
           <p className="text-slate-300 max-w-xl mx-auto mb-8 text-lg">
-            Whether you need a quick architectural audit or a full implementation squad, let's discuss your next milestone.
+            Start with a 1-week LangSmith Quick Start, or scope a full Domain Expert Quality System.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
@@ -577,7 +585,7 @@ const HomePage = ({ navigate }: PageProps) => {
               Book a call
             </Button>
             <Button variant="outline" onClick={() => navigate('services')} className="border-slate-600 text-slate-200 hover:bg-slate-800 dark:border-slate-700 dark:text-slate-300">
-              See services
+              See pricing
             </Button>
           </div>
         </div>
@@ -591,7 +599,7 @@ const ServicesPage = ({ navigate }: PageProps) => (
     <Section>
       <div className="max-w-3xl mx-auto text-center mb-16">
         <h1 className="text-4xl font-extrabold mb-6">
-          <GradientText>Services & Expertise</GradientText>
+          <GradientText>Services for LangChain and LangGraph teams</GradientText>
         </h1>
         <p className="text-xl text-slate-500 dark:text-slate-400">{CONTENT.services.intro}</p>
       </div>
@@ -611,34 +619,33 @@ const ServicesPage = ({ navigate }: PageProps) => (
 
             <div className="p-8 lg:p-12 lg:w-2/3">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{service.title}</h2>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-4xl">
-                {service.desc}
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Common Use Cases</h3>
+                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Best for</h3>
+                  <p className="text-slate-700 dark:text-slate-200">{service.bestFor}</p>
+                </div>
+                <div className="mt-6">
+                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">What is included</h3>
                   <ul className="space-y-3">
-                    {service.useCases.map((uc, i) => (
+                    {service.included.map((item, i) => (
                       <li key={i} className="flex items-start text-slate-700 dark:text-slate-200">
                         <CheckCircle className="w-5 h-5 mr-3 text-green-500 flex-shrink-0" />
-                        {uc}
+                        {item}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div>
-                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Typical Deliverables</h3>
-                  <ul className="space-y-3">
-                    {service.deliverables.map((del, i) => (
-                      <li key={i} className="flex items-start text-slate-700 dark:text-slate-200">
-                        <ArrowUpRight className="w-5 h-5 mr-3 text-blue-500 flex-shrink-0" />
-                        {del}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="mt-6">
+                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Business outcome</h3>
+                  <p className="text-slate-700 dark:text-slate-200">{service.businessOutcome}</p>
                 </div>
-              </div>
+                <div className="mt-6 p-4 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
+                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Scope caveat</h3>
+                  <p className="text-slate-700 dark:text-slate-200">{service.scopeCaveat}</p>
+                </div>
+                <div className="mt-6">
+                  <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">CTA</h3>
+                  <Button onClick={() => navigate('contact')}>{service.cta}</Button>
+                </div>
             </div>
           </div>
         ))}
@@ -658,8 +665,8 @@ const ServicesPage = ({ navigate }: PageProps) => (
     </Section>
 
     <div className="text-center py-12">
-      <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Need something specific?</h3>
-      <Button onClick={() => navigate('contact')}>Let's discuss your project</Button>
+      <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Need a scoped observability plan?</h3>
+      <Button onClick={() => navigate('contact')}>Book observability diagnostic</Button>
     </div>
   </div>
 );
@@ -672,7 +679,7 @@ const CasesPage = ({ navigate }: PageProps) => (
           <GradientText>Case Studies</GradientText>
         </h1>
         <p className="text-xl text-slate-500 dark:text-slate-400">
-          Real problems, pragmatic solutions, and measurable outcomes.
+          Production observability work with clear mechanisms and measurable quality outcomes.
         </p>
       </div>
 
@@ -698,11 +705,11 @@ const CasesPage = ({ navigate }: PageProps) => (
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">The Problem</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Quality bottleneck</h3>
                   <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{project.problem}</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Our Approach</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Observability implementation</h3>
                   <ul className="space-y-2">
                     {project.approach.map((step, i) => (
                       <li key={i} className="flex items-start text-slate-600 dark:text-slate-300 text-sm">
@@ -714,7 +721,7 @@ const CasesPage = ({ navigate }: PageProps) => (
                 </div>
                 <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-xl border border-green-100 dark:border-green-900/30">
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center">
-                    <Terminal className="w-5 h-5 mr-2 text-green-600 dark:text-green-400" /> Impact
+                    <Terminal className="w-5 h-5 mr-2 text-green-600 dark:text-green-400" /> Business outcome
                   </h3>
                   <ul className="space-y-3">
                     {project.impact.map((res, i) => (
@@ -732,11 +739,11 @@ const CasesPage = ({ navigate }: PageProps) => (
       </div>
 
       <div className="mt-16 bg-blue-50 dark:bg-slate-800 border border-blue-100 dark:border-slate-700 rounded-2xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Want a similar outcome?</h3>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Need this visibility before your next release?</h3>
         <p className="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-          We can't promise the exact same results for everyone, but we can promise the same rigorous, outcome-driven approach.
+          Start with a scoped diagnostic and get a clear fit/no-fit plus the fastest observability path for your team.
         </p>
-        <Button onClick={() => navigate('contact')}>Start a conversation</Button>
+        <Button onClick={() => navigate('contact')}>Book observability diagnostic</Button>
       </div>
     </Section>
   </div>
@@ -747,7 +754,7 @@ const AboutPage = () => (
     <Section>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl font-extrabold mb-8">
-          <GradientText>Why Prema Vision exists</GradientText>
+          <GradientText>Why Prema Vision focuses on AI observability</GradientText>
         </h1>
         <div className="prose prose-lg dark:prose-invert text-slate-500 dark:text-slate-400 mb-12">
           {CONTENT.about.philosophy.map((p, i) => (
@@ -773,7 +780,7 @@ const AboutPage = () => (
         </div>
 
         <div className="mt-16">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">How we like to work</h2>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">How we work</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {CONTENT.about.principles.map((principle, i) => (
               <div key={i} className="flex items-center p-4 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700">
@@ -797,7 +804,7 @@ const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbx7lwPV-HbYr85Ioe
  *   headers: { 'Content-Type': 'text/plain' }
  *   body: JSON.stringify({...})
  *
- * Плюс добавляем все реальные поля из React-формы:
+ * Поля в payload остаются без изменений:
  * name, email, company, budgetRange, projectBrief, howFound.
  */
 async function submitQuoteForm(formData: {
@@ -853,6 +860,10 @@ const ContactPage = () => {
     name: '',
     email: '',
     company: '',
+    useCaseType: '',
+    stack: '',
+    currentStage: '',
+    monthlyVolume: '',
     budget: '',
     brief: '',
     source: ''
@@ -867,6 +878,10 @@ const ContactPage = () => {
     if (urlParams.has('name')) params.name = urlParams.get('name') || '';
     if (urlParams.has('email')) params.email = urlParams.get('email') || '';
     if (urlParams.has('company')) params.company = urlParams.get('company') || '';
+    if (urlParams.has('useCaseType')) params.useCaseType = urlParams.get('useCaseType') || '';
+    if (urlParams.has('stack')) params.stack = urlParams.get('stack') || '';
+    if (urlParams.has('currentStage')) params.currentStage = urlParams.get('currentStage') || '';
+    if (urlParams.has('monthlyVolume')) params.monthlyVolume = urlParams.get('monthlyVolume') || '';
     if (urlParams.has('budget')) params.budget = urlParams.get('budget') || '';
     if (urlParams.has('brief') || urlParams.has('message')) {
       params.brief = urlParams.get('brief') || urlParams.get('message') || '';
@@ -886,12 +901,23 @@ const ContactPage = () => {
     setStatus('submitting');
     setErrorMessage('');
 
+    const qualificationFields = [
+      formValues.useCaseType ? `Use Case Type: ${formValues.useCaseType}` : '',
+      formValues.stack ? `Stack: ${formValues.stack}` : '',
+      formValues.currentStage ? `Current Stage: ${formValues.currentStage}` : '',
+      formValues.monthlyVolume ? `Monthly AI Request Volume: ${formValues.monthlyVolume}` : ''
+    ].filter(Boolean);
+
+    const qualificationSummary = qualificationFields.length > 0
+      ? [...qualificationFields, '', 'Quality Bottleneck Details:', formValues.brief].join('\n')
+      : formValues.brief;
+
     const formData = {
       name: formValues.name,
       email: formValues.email,
       company: formValues.company,
       budgetRange: formValues.budget,
-      projectBrief: formValues.brief,
+      projectBrief: qualificationSummary,
       howFound: formValues.source
     };
 
@@ -904,6 +930,10 @@ const ContactPage = () => {
         name: '',
         email: '',
         company: '',
+        useCaseType: '',
+        stack: '',
+        currentStage: '',
+        monthlyVolume: '',
         budget: '',
         brief: '',
         source: ''
@@ -923,7 +953,7 @@ const ContactPage = () => {
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">Message received.</h2>
           <p className="text-lg text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-8">
-            Thanks for reaching out. We usually respond within 1–2 business days.
+            Thanks for sharing your context. You get a fit/no-fit response within 24 hours.
           </p>
           <Button onClick={() => setStatus('idle')}>Send another message</Button>
         </div>
@@ -937,10 +967,10 @@ const ContactPage = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
           <div>
             <h1 className="text-4xl font-extrabold mb-6">
-              <GradientText>Let's talk engineering.</GradientText>
+              <GradientText>Let's scope your AI observability gap.</GradientText>
             </h1>
             <p className="text-xl text-slate-500 dark:text-slate-400 mb-8">
-              Have an idea for AI automation, scaling pain, or a modernization project? Fill out the form, and we'll see if we're a good match.
+              Tell us your stack, production stage, and quality bottleneck. We will reply with a clear fit/no-fit and next step.
             </p>
             
             <div className="space-y-6">
@@ -959,14 +989,14 @@ const ContactPage = () => {
             <div className="mt-12 p-6 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
               <h3 className="text-sm font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Response Time</h3>
               <p className="text-slate-500 dark:text-slate-400 text-sm">
-                We respect your time. Expect a clear Yes/No or booking link within 24 hours. Please provide as much context as possible in the project brief.
+                You get a fit/no-fit response within 24 hours.
               </p>
             </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6 bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Name <span className="text-red-500">*</span></label>
               <input 
                 required 
                 type="text" 
@@ -978,7 +1008,7 @@ const ContactPage = () => {
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Work Email</label>
+              <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Work Email <span className="text-red-500">*</span></label>
               <input 
                 required 
                 type="email" 
@@ -1001,24 +1031,92 @@ const ContactPage = () => {
             </div>
 
             <div>
-              <label htmlFor="budget" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Budget Range</label>
+              <label htmlFor="useCaseType" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Use Case Type</label>
+              <select 
+                id="useCaseType" 
+                value={formValues.useCaseType}
+                onChange={(e) => setFormValues(prev => ({ ...prev, useCaseType: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border"
+              >
+                <option value="">Select use case...</option>
+                <option value="LLM quality instability">LLM quality instability</option>
+                <option value="No visibility in production">No visibility in production</option>
+                <option value="High cost per useful answer">High cost per useful answer</option>
+                <option value="Domain feedback not operationalized">Domain feedback not operationalized</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="stack" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Stack</label>
+              <select 
+                id="stack" 
+                value={formValues.stack}
+                onChange={(e) => setFormValues(prev => ({ ...prev, stack: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border"
+              >
+                <option value="">Select stack...</option>
+                <option value="LangChain">LangChain</option>
+                <option value="LangGraph">LangGraph</option>
+                <option value="Custom orchestration">Custom orchestration</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="currentStage" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Current Stage</label>
+              <select 
+                id="currentStage" 
+                value={formValues.currentStage}
+                onChange={(e) => setFormValues(prev => ({ ...prev, currentStage: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border"
+              >
+                <option value="">Select stage...</option>
+                <option value="Pre-production">Pre-production</option>
+                <option value="Early production">Early production</option>
+                <option value="Production at scale">Production at scale</option>
+                <option value="Migration in progress">Migration in progress</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="monthlyVolume" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Monthly AI Request Volume</label>
+              <select 
+                id="monthlyVolume" 
+                value={formValues.monthlyVolume}
+                onChange={(e) => setFormValues(prev => ({ ...prev, monthlyVolume: e.target.value }))}
+                className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border"
+              >
+                <option value="">Select volume...</option>
+                <option value="<10k">&lt;10k</option>
+                <option value="10k-100k">10k-100k</option>
+                <option value="100k-1M">100k-1M</option>
+                <option value="1M+">1M+</option>
+                <option value="Unknown">Unknown</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="budget" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Budget Band</label>
               <select 
                 id="budget" 
-                required 
                 value={formValues.budget}
                 onChange={(e) => setFormValues(prev => ({ ...prev, budget: e.target.value }))}
                 className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border"
               >
                 <option value="">Select a range...</option>
-                <option value="&lt; $5k (Audit/Small Fix)">&lt; $5k (Audit/Small Fix)</option>
-                <option value="$5k – $15k">$5k – $15k</option>
-                <option value="$15k – $50k">$15k – $50k</option>
-                <option value="$50k+">$50k+</option>
+                <option value="<$1,500">&lt;$1,500</option>
+                <option value="$1,500-$5,000">$1,500-$5,000</option>
+                <option value="$5,000-$10,000">$5,000-$10,000</option>
+                <option value="$10,000+">$10,000+</option>
+                <option value="Need guidance">Need guidance</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="brief" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Project Brief</label>
+              <label htmlFor="brief" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Quality Bottleneck Details <span className="text-red-500">*</span></label>
               <textarea 
                 required 
                 id="brief" 
@@ -1027,7 +1125,7 @@ const ContactPage = () => {
                 value={formValues.brief}
                 onChange={(e) => setFormValues(prev => ({ ...prev, brief: e.target.value }))}
                 className="mt-1 block w-full rounded-md border-slate-300 dark:border-slate-600 dark:bg-slate-900 dark:text-white shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm p-3 border" 
-                placeholder="What are you trying to build or fix?"
+                placeholder="Where does quality break today and how does it impact product or operations?"
               ></textarea>
             </div>
 
@@ -1050,7 +1148,7 @@ const ContactPage = () => {
             )}
 
             <Button type="submit" className="w-full" disabled={status === 'submitting'}>
-              {status === 'submitting' ? 'Sending...' : 'Send Message'}
+              {status === 'submitting' ? 'Sending...' : 'Submit qualification form'}
             </Button>
           </form>
         </div>
@@ -1109,7 +1207,7 @@ const Header = ({ navigate, currentPage, isDark, toggleTheme }: HeaderProps) => 
                 {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </button>
               <Button onClick={() => navigate('contact')} className="hidden lg:inline-flex">
-                Book a call
+                Book observability diagnostic
               </Button>
             </div>
           </div>
@@ -1148,7 +1246,7 @@ const Header = ({ navigate, currentPage, isDark, toggleTheme }: HeaderProps) => 
               </button>
             ))}
             <div className="pt-4 px-3">
-               <Button className="w-full" onClick={() => { navigate('contact'); setMobileMenuOpen(false); }}>Book a call</Button>
+              <Button className="w-full" onClick={() => { navigate('contact'); setMobileMenuOpen(false); }}>Book observability diagnostic</Button>
             </div>
           </div>
         </div>
@@ -1168,7 +1266,7 @@ const Footer = ({ navigate }: FooterProps) => (
         <div className="col-span-1 md:col-span-2">
           <Logo className="mb-4" />
           <p className="text-slate-500 dark:text-slate-400 max-w-sm mb-6">
-            Boutique AI automation and cloud engineering studio. We build systems that ship, scale, and pay off.
+            LLM observability consulting for LangChain and LangGraph teams. We implement LangSmith workflows that let domain experts improve AI quality.
           </p>
           <div className="flex space-x-4">
              <a href="https://github.com/premavision" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-500 dark:hover:text-slate-300" aria-label="GitHub">
@@ -1212,9 +1310,6 @@ const Footer = ({ navigate }: FooterProps) => (
       <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p className="text-slate-400 text-sm">
           &copy; {CONTENT.company.year} {CONTENT.company.legalName}. All rights reserved.
-        </p>
-        <p className="text-slate-400 text-sm mt-2 md:mt-0">
-          Designed & Built with React & Tailwind.
         </p>
       </div>
     </div>
