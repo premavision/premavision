@@ -94,10 +94,6 @@ const CONTENT = {
     logoUrl: "/logo.png", // Логотип - загрузите файл в public/logo.png
     legalName: "Prema Vision LLC",
     email: "support@premavision.net",
-    founder: {
-      name: "Denys Korolkov",
-      avatarUrl: "https://share.cleanshot.com/7vhzJrxf+", // URL аватара
-    },
     location: "USA",
     year: new Date().getFullYear(),
   },
@@ -284,10 +280,20 @@ const CONTENT = {
     founder: {
       name: "Denys Korolkov",
       role: "Founder, Principal Engineer, Fractional CTO",
+      avatarUrl: "/Денис5.png",
       bio: [
         "Co-founder and CTO at Structed.ai, where LangGraph agents run in production with domain-expert feedback loops.",
         "Denys is a principal engineer who combines architecture ownership with hands-on implementation.",
         "He focuses on practical observability systems that turn production signals into faster quality decisions."
+      ]
+    },
+    cofounder: {
+      name: "Victoria Von",
+      role: "Co-founder and Creative Director",
+      avatarUrl: "/1D654585-BF79-4660-A027-41A67A50F359.jpg",
+      bio: [
+        "Product concept, user experience, category positioning and go-to-market.",
+        "Turned the execution model into the consumer product, the brand and the market story."
       ]
     },
     principles: [
@@ -763,20 +769,21 @@ const AboutPage = () => (
         </div>
 
         <div className="border-t border-slate-200 dark:border-slate-700 pt-12">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">About the Founder</h2>
-          <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{CONTENT.about.founder.name}</h3>
-              <p className="text-blue-600 dark:text-blue-400 mb-4">{CONTENT.about.founder.role}</p>
-              <div className="space-y-4 text-slate-600 dark:text-slate-300">
-                 {CONTENT.about.founder.bio.map((p, i) => <p key={i}>{p}</p>)}
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">About the Founders</h2>
+          {[CONTENT.about.founder, CONTENT.about.cofounder].map((founder) => (
+            <div key={founder.name} className="flex flex-col md:flex-row gap-8 items-start mb-10 last:mb-0">
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white">{founder.name}</h3>
+                <p className="text-blue-600 dark:text-blue-400 mb-4">{founder.role}</p>
+                <div className="space-y-4 text-slate-600 dark:text-slate-300">
+                  {founder.bio.map((p, i) => <p key={i}>{p}</p>)}
+                </div>
+              </div>
+              <div className="flex-shrink-0 w-32 h-32 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg">
+                <img src={founder.avatarUrl} alt={founder.name} className="w-full h-full object-cover" />
               </div>
             </div>
-            {/* Founder Avatar - Using the new URL */}
-            <div className="flex-shrink-0 w-32 h-32 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg">
-              <img src={CONTENT.company.founder.avatarUrl} alt={CONTENT.company.founder.name} className="w-full h-full object-cover" />
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className="mt-16">
