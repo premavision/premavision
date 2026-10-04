@@ -3,8 +3,19 @@
  * Customize: RECIPIENT_EMAIL, ALLOWED_ORIGIN, validation rules as needed.
  */
 
-const RECIPIENT_EMAIL = 'support@premavision.net'; // <-- Customize recipient email
+const RECIPIENT_EMAIL = 'denyskorolkov@premavision.net'; // <-- Customize recipient email
 const ALLOWED_ORIGIN = '*'; // <-- Customize allowed origin (use '*' for all origins)
+
+// Anti-spam config.
+// Bots found this endpoint directly (it's a public URL sitting in a public
+// GitHub repo) and started replaying the *old* legacy payload shape
+// (name/email/projectType/message) straight at it, skipping the site
+// entirely. These checks don't stop a targeted attacker who reads the
+// current bundle, but they kill generic replay bots that only know the
+// old field shape and don't send FORM_GUARD.
+const FORM_GUARD_TOKEN = 'kp-guard-2026-08'; // must match hidden field sent by the real forms
+const RATE_LIMIT_PER_EMAIL_PER_HOUR = 3;
+const RATE_LIMIT_GLOBAL_PER_MINUTE = 20;
 
 /**
  * Optional handler for OPTIONS preflight.
@@ -54,6 +65,19 @@ function doPost(e) {
     var validationError = validatePayload_(data);
     if (validationError) {
       return buildResponse_(400, { success: false, error: validationError });
+    }
+
+    // Bot check. Return a fake success so scripts blindly replaying the old
+    // payload shape don't get a signal to adjust — but never send the email.
+    if (isLikelySpam_(data)) {
+      console.log('Rejected as spam (silent):', JSON.stringify(data));
+      return buildResponse_(200, { success: true });
+    }
+
+    var rateLimitError = checkRateLimit_(String(data.email || '').trim());
+    if (rateLimitError) {
+      console.log('Rate limited:', rateLimitError);
+      return buildResponse_(200, { success: true }); // silent, same reasoning as above
     }
 
     var name = String(data.name || '').trim();
@@ -171,6 +195,69 @@ function buildHtmlEmail_(name, email, company, budgetRange, projectBrief, howFou
     '</div>' +
     '</div>' +
     '</body></html>';
+}
+
+/**
+ * Heuristic spam detection for generic replay bots.
+ * Not meant to stop a targeted attacker — just the blind scripts currently
+ * hitting this endpoint with the legacy payload shape.
+ */
+function isLikelySpam_(data) {
+  // 1. Honeypot: real forms never fill this hidden field. Bots that
+  //    autofill every field they see will trip it.
+  if (data.website) return true;
+
+  // 2. Form guard: real forms send this constant in a hidden field.
+  //    A script replaying only {name, email, projectType, message} won't
+  //    have it at all.
+  if (String(data.formGuard || '') !== FORM_GUARD_TOKEN) return true;
+
+  // 3. Content signature match: current spam wave sends a message body
+  //    that's nothing but a phone number (10-15 digits, no letters).
+  var body = String(data.message || data.projectBrief || '').trim();
+  if (body && /^[\d\s().+-]{7,20}$/.test(body)) return true;
+
+  return false;
+}
+
+/**
+ * Cheap rate limiting via CacheService (max 6h TTL, good enough here —
+ * legitimate submissions are rare, so short windows are plenty).
+ */
+function checkRateLimit_(email) {
+  var cache = CacheService.getScriptCache();
+
+  var normalizedEmail = normalizeEmail_(email);
+  var emailKey = 'rl_email_' + normalizedEmail;
+  var emailCount = Number(cache.get(emailKey) || 0) + 1;
+  cache.put(emailKey, String(emailCount), 3600); // 1h
+  if (emailCount > RATE_LIMIT_PER_EMAIL_PER_HOUR) {
+    return 'Per-email limit exceeded: ' + normalizedEmail;
+  }
+
+  var minuteKey = 'rl_global_' + Math.floor(Date.now() / 60000);
+  var minuteCount = Number(cache.get(minuteKey) || 0) + 1;
+  cache.put(minuteKey, String(minuteCount), 120); // 2 min, well past the 1-min bucket
+  if (minuteCount > RATE_LIMIT_GLOBAL_PER_MINUTE) {
+    return 'Global per-minute limit exceeded.';
+  }
+
+  return null;
+}
+
+/**
+ * Strips Gmail dot-tricks (a.b.c@gmail.com === abc@gmail.com) so the same
+ * bot can't dodge the per-email rate limit by inserting dots.
+ */
+function normalizeEmail_(email) {
+  var parts = String(email || '').toLowerCase().trim().split('@');
+  if (parts.length !== 2) return String(email || '').toLowerCase().trim();
+  var local = parts[0];
+  var domain = parts[1];
+  if (domain === 'gmail.com' || domain === 'googlemail.com') {
+    local = local.split('+')[0].replace(/\./g, '');
+  }
+  return local + '@' + domain;
 }
 
 /**
