@@ -552,6 +552,12 @@ export function Footer() {
             <a href={SITE.linkedinVictoria} className="block py-2 text-slate-400 hover:text-white md:py-0">
               Victoria on LinkedIn
             </a>
+            <a href={SITE.linkedinCompany} className="block py-2 text-slate-400 hover:text-white md:py-0">
+              Prema Vision on LinkedIn
+            </a>
+            <a href={SITE.facebook} className="block py-2 text-slate-400 hover:text-white md:py-0">
+              Prema Vision on Facebook
+            </a>
           </div>
         </div>
 

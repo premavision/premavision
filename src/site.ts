@@ -15,6 +15,8 @@ export const SITE = {
   city: 'Palm Coast, Florida',
   linkedinDenys: 'https://www.linkedin.com/in/denyskorolkov/',
   linkedinVictoria: 'https://www.linkedin.com/in/victoriavon/',
+  linkedinCompany: 'https://www.linkedin.com/company/premavision/',
+  facebook: 'https://www.facebook.com/premavision',
   korolkov: 'https://korolkov.pro/',
   routineRun: 'https://routinerun.com/',
   structed: 'https://structed.ai/'
