@@ -1,4 +1,4 @@
-import { ArrowLink, ButtonLink, Faq, PackageCard, ProductMark, PROOF, ProofLinks, Section, Stat, type Package, type QA } from '../components';
+import { ArrowLink, ButtonLink, Clip, Faq, PackageCard, ProductMark, PROOF, ProofLinks, Section, Stat, type Package, type QA } from '../components';
 import { PageHero } from './shared';
 import { InlineQuotes } from '../testimonials';
 
@@ -149,6 +149,15 @@ export default function AiInterviews() {
         }
         lead="Structed is an AI interview platform that already exists and runs: AI-led client interviews that end in structured requirements, a back office where experts change the agent and publish without a developer, and an MCP server for AI assistants. Denys built it as CTO. When it fits your conversation, we set it up and connect it to your business instead of building a new one: weeks instead of months, and a fraction of the cost."
       >
+        <div className="mt-12">
+          <Clip
+            src="/video/structed-interview.mp4"
+            poster="/video/structed-interview-poster.webp"
+            width={848}
+            height={624}
+            caption="Ten seconds of Structed: the client answers out loud, wherever they are, and the AI interviewer asks the next question. The requirements come out at the end."
+          />
+        </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {STRUCTED_PACKAGES.map((p) => (
             <PackageCard key={p.name} p={p} />

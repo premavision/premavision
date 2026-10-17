@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown, Mail } from 'lucide-react';
 import { Link, useRouter } from './router';
 import { FORM, NAV, SITE } from './site';
@@ -757,5 +757,56 @@ export function ContactForm() {
         {state === 'sending' ? 'Sending…' : 'Send'}
       </button>
     </form>
+  );
+}
+
+/* A short muted clip that plays while it is on screen (never under
+ * prefers-reduced-motion), with controls to unmute or pause. */
+export function Clip({
+  src,
+  poster,
+  width,
+  height,
+  caption
+}: {
+  src: string;
+  poster: string;
+  width: number;
+  height: number;
+  caption: React.ReactNode;
+}) {
+  const ref = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    v.muted = true; // React doesn't write the muted attribute, and browsers only autoplay muted video
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) v.play().catch(() => {});
+        else v.pause();
+      },
+      { threshold: 0.4 }
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <figure className="mx-auto max-w-3xl">
+      <video
+        ref={ref}
+        muted
+        loop
+        playsInline
+        controls
+        preload="none"
+        poster={poster}
+        width={width}
+        height={height}
+        className="h-auto w-full rounded-2xl border border-white/10 bg-black shadow-[0_30px_80px_-30px_rgba(0,168,240,0.35)]"
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+      <figcaption className="mt-3 text-center text-[14px] leading-6 text-slate-400">{caption}</figcaption>
+    </figure>
   );
 }

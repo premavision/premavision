@@ -226,7 +226,8 @@ function modulePreloads(path) {
 }
 
 const analytics = ANALYTICS_TOKEN
-  ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${ANALYTICS_TOKEN}"}'></script>`
+  ? // only on the real domain: previews and localhost are not counted (and Cloudflare rejects them anyway)
+    `<script>if(location.hostname==='premavision.net'){var s=document.createElement('script');s.defer=true;s.src='https://static.cloudflareinsights.com/beacon.min.js';s.setAttribute('data-cf-beacon','{"token":"${ANALYTICS_TOKEN}"}');document.body.appendChild(s)}</script>`
   : '';
 
 function page(route, html, opts = {}) {
