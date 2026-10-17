@@ -1,4 +1,6 @@
-# Facebook Page: Prema Vision (draft, 17 Oct 2026)
+# Facebook Page: Prema Vision (17 Oct 2026)
+
+Live: https://www.facebook.com/premavision (page id 61592978470172). Created 17 Oct 2026 with the setup below. Pending: the first post (attach og/facebook-post.jpg) and Facebook access for Victoria.
 
 Status: no Prema Vision Page existed under Denys's profile on 17 Oct 2026 (Pages he manages: Fly Under Water, Florida For Fun). facebook.com/premavision looked free.
 
@@ -9,10 +11,11 @@ Status: no Prema Vision Page existed under Denys's profile on 17 Oct 2026 (Pages
 - Website: https://premavision.net
 - Email: denys@premavision.net
 - Phone: (407) 867-9870
-- Location: Palm Coast, Florida, service area United States (no street address shown)
+- Location: Palm Coast, FL (no street address; Facebook's service area takes only cities and neighbourhoods, so "across the US" lives in the text)
 - Action button: Contact us, opening https://premavision.net/contact/
 - Profile picture: og/facebook-profile.png (1080x1080, the diamond logo on navy; source og/facebook-profile.html)
 - Cover: og/facebook-cover.png (1640x624; source og/facebook-cover.html)
+- Post image: og/facebook-post.jpg (rendered from og/og-source.html; public/og/premavision.jpg is older and still says "Mobile apps with AI inside")
 
 ## Bio (90 of 101 characters)
 AI systems for companies, built and taken to production. Fixed price. Palm Coast, Florida.
