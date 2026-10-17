@@ -1,4 +1,4 @@
-import { ArrowLink, ButtonLink, Clip, Faq, PackageCard, ProductMark, PROOF, ProofLinks, Section, Stat, type Package, type QA } from '../components';
+import { AmbientVideo, ArrowLink, ButtonLink, Eyebrow, Faq, PackageCard, ProductMark, PROOF, ProofLinks, Section, Stat, type Package, type QA } from '../components';
 import { PageHero } from './shared';
 import { InlineQuotes } from '../testimonials';
 
@@ -138,24 +138,26 @@ export default function AiInterviews() {
         </div>
       </Section>
 
-      <Section
-        art="interview-thread"
-        eyebrow="Already built"
-        title={
-          <span className="flex items-center gap-4">
-            <ProductMark name="Structed" size={42} />
-            Start with Structed, not from scratch
-          </span>
-        }
-        lead="Structed is an AI interview platform that already exists and runs: AI-led client interviews that end in structured requirements, a back office where experts change the agent and publish without a developer, and an MCP server for AI assistants. Denys built it as CTO. When it fits your conversation, we set it up and connect it to your business instead of building a new one: weeks instead of months, and a fraction of the cost."
-      >
-        <div className="mt-12">
-          <Clip
+      <Section>
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
+          <header>
+            <Eyebrow>Already built</Eyebrow>
+            <h2 className="mt-4 flex items-center gap-4 text-3xl font-semibold text-white sm:text-[2.6rem] sm:leading-[1.1]">
+              <ProductMark name="Structed" size={42} />
+              Start with Structed, not from scratch
+            </h2>
+            <div className="mt-5 text-lg leading-8 text-slate-300">
+              Structed is an AI interview platform that already exists and runs: AI-led client interviews that end in
+              structured requirements, a back office where experts change the agent and publish without a developer, and
+              an MCP server for AI assistants. Denys built it as CTO. When it fits your conversation, we set it up and
+              connect it to your business instead of building a new one: weeks instead of months, and a fraction of the
+              cost.
+            </div>
+          </header>
+          <AmbientVideo
             src="/video/structed-interview.mp4"
             poster="/video/structed-interview-poster.webp"
-            width={848}
-            height={624}
-            caption="Ten seconds of Structed: the client answers out loud, wherever they are, and the AI interviewer asks the next question. The requirements come out at the end."
+            label="Structed in use: a client answers out loud on a phone while the AI interviewer asks the next question in the chat"
           />
         </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2">

@@ -612,3 +612,9 @@ form h2,
     transform: translateY(-50%);
   }
 }
+
+/* edges of an ambient clip fade into the page instead of ending in a frame */
+.ambient-video video {
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+}

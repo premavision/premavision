@@ -810,3 +810,35 @@ export function Clip({
     </figure>
   );
 }
+
+/* A muted clip that sits in the layout like a picture: whole frame, no player,
+ * edges melting into the page. Plays only while on screen; under
+ * prefers-reduced-motion only the poster shows. */
+export function AmbientVideo({ src, poster, label, className = '' }: { src: string; poster: string; label: string; className?: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    v.muted = true;
+    const io = new IntersectionObserver(([e]) => (e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: 0.2 });
+    io.observe(v);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <div className={`ambient-video relative ${className}`}>
+      <div className="absolute -inset-y-8 inset-x-0 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(0,168,240,0.22),transparent)] blur-2xl lg:-inset-10" aria-hidden="true" />
+      <video
+        ref={ref}
+        muted
+        loop
+        playsInline
+        preload="none"
+        poster={poster}
+        aria-label={label}
+        className="block aspect-[848/624] h-auto w-full rounded-2xl object-cover"
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+    </div>
+  );
+}
