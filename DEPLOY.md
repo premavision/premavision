@@ -49,4 +49,5 @@ All forms (main and `/local/`) post to the Apps Script in `src/google_script.js`
 
 - Open `/`, `/mobile/`, `/ai-interviews/`, `/work/`, `/about/`, `/notes/`, `/contact/`, `/local/` on a phone.
 - Paste the home URL into LinkedIn's Post Inspector to refresh the preview.
-- Submit `https://premavision.net/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+- Google Search Console: property `https://premavision.net/` (account denys@premavision.net), verified by `public/googlee4c7d61c501032fe.html` (keep that file), sitemap submitted 17 Oct 2026.
+- Bing, Yandex and other IndexNow engines: after a deploy is live, run `npm run indexnow` (key file in `public/`, script in `scripts/indexnow.mjs`). Bing Webmaster Tools itself needs a Microsoft sign-in; it can import the Google property.

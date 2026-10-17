@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "build": "node scripts/routines.mjs && tsc --noEmit && NODE_ENV=production vite build && NODE_ENV=production vite build --ssr src/entry-server.tsx && NODE_ENV=production node scripts/prerender.mjs",
     "build:drafts": "SHOW_DRAFTS=1 npm run build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "repository": {
     "type": "git",
