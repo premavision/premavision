@@ -57,7 +57,14 @@ h1,
 h2,
 h3 {
   letter-spacing: -0.02em;
-  text-wrap: balance;
+}
+/* balanced headings look narrow on a phone: full width there */
+@media (min-width: 640px) {
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
 }
 /* Inter Tight for page, section and card headings, prices and numbers;
    Manrope for running text; Geist Mono for labels. */
@@ -146,8 +153,12 @@ form h2,
 .local h2 {
   font-size: clamp(1.5rem, 3vw, 1.9rem) !important;
 }
-p {
-  text-wrap: pretty;
+/* Safari's "pretty" evens out the whole paragraph and leaves narrow lines
+   on a phone; keep it for wider screens only */
+@media (min-width: 640px) {
+  p {
+    text-wrap: pretty;
+  }
 }
 ::selection {
   background: rgba(255, 200, 30, 0.35);
@@ -411,6 +422,8 @@ p {
   .snap-row {
     display: flex !important;
     overflow-x: auto;
+    overflow-y: hidden; /* sideways only: a vertical swipe scrolls the page */
+    touch-action: pan-x pan-y;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 1rem;
     gap: 14px !important;

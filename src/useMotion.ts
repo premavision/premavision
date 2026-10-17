@@ -12,8 +12,15 @@ export function useMotion(path: string) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
 
     // Cards already on screen stay put: with prerendered HTML this avoids a flash.
+    // On a phone, cards in a sideways row (.snap-row) stay still: an entering card
+    // would push the row taller than its box, and the ones off to the right
+    // would never be seen by the observer.
+    const phone = window.matchMedia('(max-width: 639px)').matches;
     const cards = [...document.querySelectorAll<HTMLElement>(GLASS)].filter(
-      (card) => card.getBoundingClientRect().top > window.innerHeight * 0.9 && !card.classList.contains('reveal')
+      (card) =>
+        card.getBoundingClientRect().top > window.innerHeight * 0.9 &&
+        !card.classList.contains('reveal') &&
+        !(phone && card.closest('.snap-row'))
     );
     cards.forEach((card) => {
       const siblings = card.parentElement ? [...card.parentElement.children].filter((el) => el.matches(GLASS)) : [];
