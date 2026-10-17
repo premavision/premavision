@@ -1,107 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Prema Vision - LangChain and LangGraph Observability Consulting</title>
-    <meta name="title" content="Prema Vision - LangChain and LangGraph Observability Consulting" />
-    <meta name="description" content="LLM observability consulting for LangChain and LangGraph teams. We implement LangSmith workflows with tracing, evaluators, annotation workflows, dashboards, and alerts." />
-    <meta name="keywords" content="LangChain observability, LangGraph observability, LangSmith setup, LLM quality, AI evaluation, annotation workflow, evaluator dashboards" />
-    <meta name="author" content="Prema Vision LLC" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://premavision.net/" />
-    <meta property="og:title" content="Prema Vision - LangChain and LangGraph Observability Consulting" />
-    <meta property="og:description" content="LLM observability consulting for LangChain and LangGraph teams. We implement LangSmith workflows with tracing, evaluators, annotation workflows, dashboards, and alerts." />
-    <meta property="og:image" content="https://premavision.net/logo.png" />
-    <meta property="og:site_name" content="Prema Vision" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://premavision.net/" />
-    <meta property="twitter:title" content="Prema Vision - LangChain and LangGraph Observability Consulting" />
-    <meta property="twitter:description" content="LLM observability consulting for LangChain and LangGraph teams. We implement LangSmith workflows with tracing, evaluators, annotation workflows, dashboards, and alerts." />
-    <meta property="twitter:image" content="https://premavision.net/logo.png" />
-    
-    <!-- Canonical URL -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Prema Vision</title>
+    <meta name="description" content="" />
     <link rel="canonical" href="https://premavision.net/" />
-    
-    <!-- Additional SEO -->
-    <meta name="theme-color" content="#0f172a" />
-    <meta name="msapplication-TileColor" content="#0f172a" />
-    
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Prema Vision LLC",
-      "alternateName": "Prema Vision",
-      "url": "https://premavision.net",
-      "logo": "https://premavision.net/logo.png",
-      "description": "LLM observability consulting for LangChain and LangGraph teams. We implement LangSmith workflows that let domain experts improve AI quality.",
-      "email": "support@premavision.net",
-      "founder": {
-        "@type": "Person",
-        "name": "Denys Korolkov",
-        "jobTitle": "Principal Consultant & Founder"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "US"
-      },
-      "sameAs": [
-        "https://github.com/premavision",
-        "https://www.linkedin.com/company/premavision"
-      ],
-      "serviceType": [
-        "LangSmith Setup",
-        "AI Observability Consulting",
-        "Domain Evaluator Design",
-        "Annotation Workflow Implementation",
-        "LLM Quality Monitoring"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Prema Vision",
-      "image": "https://premavision.net/logo.png",
-      "description": "Consulting for LangChain and LangGraph observability with tracing, evaluators, annotation workflows, dashboards, and alerts.",
-      "telephone": "",
-      "email": "support@premavision.net",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "US"
-      },
-      "priceRange": "$5000+",
-      "areaServed": "Worldwide"
-    }
-    </script>
+    <!--head-->
+    <meta name="theme-color" content="#050B24" />
+    <meta name="author" content="Prema Vision LLC" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="text/plain" title="LLM summary" href="/llms.txt" />
+    <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <style>
+      /* before the stylesheet arrives: right colours, no white flash */
+      html, body { background: #050b24; color: #e6ecf8; }
+      html[data-theme='local'], html[data-theme='local'] body { background: #fff; color: #0f172a; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
-    
-    <!-- GitHub Pages SPA redirect handler -->
-    <script>
-      // Handle redirect from 404.html for History API routing
-      (function() {
-        var redirect = new URLSearchParams(window.location.search).get('redirect');
-        if (redirect) {
-          // Remove the redirect parameter and update the URL with the actual path
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
-    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

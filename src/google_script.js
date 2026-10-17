@@ -3,7 +3,7 @@
  * Customize: RECIPIENT_EMAIL, ALLOWED_ORIGIN, validation rules as needed.
  */
 
-const RECIPIENT_EMAIL = 'denyskorolkov@premavision.net'; // <-- Customize recipient email
+const RECIPIENT_EMAIL = 'denys@premavision.net'; // the public address on the site
 const ALLOWED_ORIGIN = '*'; // <-- Customize allowed origin (use '*' for all origins)
 
 // Anti-spam config.

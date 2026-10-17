@@ -142,3 +142,4 @@ vite.config.ts.timestamp-*
 dist/
 dist-ssr/
 *.local
+.ssr-build/

@@ -2,3 +2,600 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts served from this site (latin subset, variable weights), so text
+ * doesn't wait on two more domains. From Google Fonts, SIL Open Font License. */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url('/fonts/geist-mono-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('/fonts/inter-tight-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/manrope-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------------------------------------------------------------------
+ * Base. Dark navy from the logo's outline, sky blue and sun yellow from
+ * its two paths. The local-business pages (/local/) opt out with .local
+ * and use a light, high-contrast, large-type look instead.
+ * ------------------------------------------------------------------- */
+:root {
+  color-scheme: dark;
+  --ink: #050b24;
+  --sky: #00a8f0;
+  --ice: #90d8f0;
+  --sun: #ffc81e;
+}
+html {
+  background: var(--ink);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--ink);
+  color: #d5deec;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+/* Inter Tight for page, section and card headings, prices and numbers;
+   Manrope for running text; Geist Mono for labels. */
+h1,
+h2,
+h3,
+.card-title,
+.font-display {
+  font-family: 'Inter Tight', 'Manrope', -apple-system, system-ui, sans-serif;
+}
+h1,
+h2 {
+  font-weight: 600 !important;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem) !important;
+}
+h2 {
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem) !important;
+  line-height: 1.08;
+}
+/* headings inside cards: a real title, not just bold text */
+.card-title,
+.glass h2,
+.glass-sky h2,
+.glass-sun h2,
+.glass h3,
+.glass-sky h3,
+.glass-sun h3 {
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: #fff;
+  font-size: 1.28rem !important;
+}
+.glass h2,
+.glass-sky h2,
+.glass-sun h2 {
+  font-size: 1.6rem !important;
+  letter-spacing: -0.025em;
+}
+form h2,
+[role='status'] h2 {
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  font-size: 1.5rem !important;
+}
+.local h1,
+.local h2,
+.local h3 {
+  font-family: 'Inter Tight', 'Manrope', -apple-system, system-ui, sans-serif;
+  letter-spacing: -0.025em;
+}
+.local {
+  background: #f5f7fb;
+}
+.local-copy ul > li::marker {
+  color: #00a8f0;
+}
+.local .glass h3,
+.local h3 {
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+}
+.font-display {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.text-gradient {
+  padding-right: 0.06em;
+}
+/* the local-business pages keep one plain, large sans for readability */
+.local h1,
+.local h2 {
+  font-family: inherit;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.local h1 {
+  font-size: clamp(1.9rem, 4.5vw, 3rem) !important;
+}
+.local h2 {
+  font-size: clamp(1.5rem, 3vw, 1.9rem) !important;
+}
+p {
+  text-wrap: pretty;
+}
+::selection {
+  background: rgba(255, 200, 30, 0.35);
+}
+:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--sun);
+  color: #050b24;
+  font-weight: 600;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* text gradient: the logo's two paths */
+.text-gradient {
+  background: linear-gradient(100deg, #ffffff 0%, #c9ecfa 45%, #7fcdef 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* a faint blueprint grid behind sections */
+.blueprint {
+  background-image:
+    linear-gradient(to right, rgba(144, 216, 240, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(144, 216, 240, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ---------------------------------------------------------------------
+ * Liquid Glass, dark variant. Same material as routinerun.com and
+ * korolkov.pro: translucent fill, blur 24px with saturation 1.8, a bright
+ * top edge and a specular rim. Tints are Prema Vision's: sky and sun.
+ * ------------------------------------------------------------------- */
+.glass,
+.glass-sky,
+.glass-sun {
+  position: relative;
+  background:
+    radial-gradient(120% 70% at 12% 0%, rgba(255, 255, 255, 0.045), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  backdrop-filter: blur(20px) saturate(1.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 18px 40px -28px rgba(0, 0, 0, 0.9);
+}
+.glass-sky {
+  background:
+    radial-gradient(120% 70% at 12% 0%, rgba(255, 255, 255, 0.045), transparent 55%),
+    linear-gradient(160deg, rgba(0, 168, 240, 0.08), rgba(10, 22, 64, 0.25) 70%);
+}
+/* the one card that matters on a row: a thin warm line on top, no tint */
+.glass-sun {
+  background:
+    radial-gradient(120% 70% at 12% 0%, rgba(255, 255, 255, 0.045), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border-top: 2px solid rgba(255, 200, 30, 0.75);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 18px 40px -28px rgba(0, 0, 0, 0.9) !important;
+}
+.glass::before,
+.glass-sky::before,
+.glass-sun::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.08) 28%,
+    rgba(255, 255, 255, 0) 58%,
+    rgba(255, 255, 255, 0.2)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+.glass:hover::before,
+.glass-sky:hover::before,
+.glass-sun:hover::before {
+  opacity: 1;
+}
+
+/* soft coloured light behind the glass so it has something to bend */
+.ambient {
+  background-image:
+    radial-gradient(45% 55% at 8% 12%, rgba(0, 168, 240, 0.09), transparent 70%),
+    radial-gradient(40% 50% at 92% 88%, rgba(0, 168, 240, 0.05), transparent 70%);
+}
+.ambient-sun {
+  background-image:
+    radial-gradient(45% 55% at 90% 10%, rgba(255, 200, 30, 0.045), transparent 70%),
+    radial-gradient(40% 50% at 8% 90%, rgba(0, 168, 240, 0.08), transparent 70%);
+}
+
+@media (max-width: 639px) {
+  .glass,
+  .glass-sky,
+  .glass-sun {
+    -webkit-backdrop-filter: blur(14px) saturate(1.6);
+    backdrop-filter: blur(14px) saturate(1.6);
+  }
+}
+
+/* ---------------------------------------------------------------------
+ * Motion. Cards below the fold enter one beat apart, light follows the
+ * pointer across the glass, the hero blueprint draws itself once.
+ * Everything here switches off under prefers-reduced-motion.
+ * ------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  translate: 0 28px;
+  scale: 0.98;
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.9, 0.24, 1),
+    translate 0.8s cubic-bezier(0.2, 0.9, 0.24, 1),
+    scale 0.8s cubic-bezier(0.2, 0.9, 0.24, 1),
+    box-shadow 0.3s ease;
+  transition-delay: var(--beat, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+.reveal.reveal-done {
+  transition-delay: 0ms;
+}
+
+.glass::after,
+.glass-sky::after,
+.glass-sun::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 255, 255, 0.06), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.glass:hover::after,
+.glass-sky:hover::after,
+.glass-sun:hover::after {
+  opacity: 1;
+}
+
+/* the hero blueprint: lines draw in, then a thread of light runs the path */
+@keyframes draw {
+  from { stroke-dashoffset: var(--len, 600); }
+  to { stroke-dashoffset: 0; }
+}
+.draw {
+  stroke-dasharray: var(--len, 600);
+  animation: draw 2.2s cubic-bezier(0.6, 0.1, 0.2, 1) var(--delay, 0s) both;
+}
+@keyframes thread {
+  to { stroke-dashoffset: -260; }
+}
+.thread {
+  stroke-dasharray: 18 242;
+  animation: thread 4.5s linear 2.4s infinite;
+}
+@keyframes node-pop {
+  0% { opacity: 0; transform: scale(0.4); }
+  70% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.node-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: node-pop 0.6s ease-out var(--delay, 0s) both;
+}
+
+/* a run's current step breathes */
+@keyframes breathe {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(255, 200, 30, 0.25), 0 0 18px rgba(255, 200, 30, 0.35); }
+  50% { box-shadow: 0 0 0 6px rgba(255, 200, 30, 0.18), 0 0 30px rgba(255, 200, 30, 0.55); }
+}
+.breathe {
+  animation: breathe 2.6s ease-in-out infinite;
+}
+
+/* the logo turns a quarter of a degree with the pointer: barely there */
+.logo-tilt {
+  transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.24, 1);
+}
+.logo-tilt:hover {
+  transform: rotate(-8deg) scale(1.04);
+}
+
+/* page change: a short fade, never a slide */
+@keyframes page-in {
+  from { opacity: 0; translate: 0 8px; }
+  to { opacity: 1; translate: 0 0; }
+}
+.page-in {
+  animation: page-in 0.45s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+    transition: none;
+  }
+  .draw,
+  .thread,
+  .node-pop,
+  .breathe,
+  .page-in {
+    animation: none;
+  }
+  .draw {
+    stroke-dasharray: none;
+  }
+  .thread {
+    display: none;
+  }
+  .logo-tilt,
+  .logo-tilt:hover {
+    transition: none;
+    transform: none;
+  }
+  .glass::after,
+  .glass-sky::after,
+  .glass-sun::after {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------
+ * Phones: long stacks of cards become swipeable rows; the next card
+ * peeks in from the right so the row explains itself.
+ * ------------------------------------------------------------------- */
+@media (max-width: 639px) {
+  .snap-row {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 1rem;
+    gap: 14px !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 6px 1rem 22px;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .snap-row > * {
+    flex: 0 0 84%;
+    scroll-snap-align: start;
+  }
+}
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* article body */
+.prose-pv {
+  counter-reset: sec;
+}
+.prose-pv p {
+  margin-top: 1.15em;
+  line-height: 1.8;
+}
+.note-body > p:first-child {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+.prose-pv h2 {
+  margin-top: 2.4em;
+  font-size: 1.75rem !important;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.025em;
+}
+.note-body h2::before {
+  counter-increment: sec;
+  content: counter(sec, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.7em;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--sun);
+}
+.prose-pv ul {
+  margin-top: 1.2em;
+  padding: 0;
+  list-style: none;
+}
+.prose-pv li {
+  position: relative;
+  margin-top: 0.7em;
+  padding-left: 1.6em;
+  line-height: 1.7;
+}
+.prose-pv li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.82em;
+  width: 0.8em;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--sun);
+}
+.prose-pv a {
+  color: var(--ice);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-pv strong {
+  color: #fff;
+  font-weight: 600;
+}
+.prose-pv blockquote {
+  position: relative;
+  margin: 2em 0 0;
+  padding-left: 3rem;
+  font-family: 'Inter Tight', 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #fff;
+}
+.prose-pv blockquote::before {
+  content: '\201C';
+  position: absolute;
+  left: 0;
+  top: -0.35em;
+  font-family: Georgia, serif;
+  font-size: 4.2rem;
+  line-height: 1;
+  color: rgba(255, 200, 30, 0.8);
+}
+.prose-pv .note-question {
+  margin-top: 2.6em;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 200, 30, 0.35);
+  background: linear-gradient(135deg, rgba(255, 200, 30, 0.09), rgba(0, 168, 240, 0.06));
+  padding: 1.5rem 1.6rem;
+}
+.prose-pv .note-question p {
+  margin: 0.5em 0 0;
+  font-family: 'Inter Tight', 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* ---------------------------------------------------------------------
+ * Local-business pages: light, high contrast, large type. Flagler
+ * County's median age is 54; these pages must pass WCAG 2.1 AA themselves.
+ * ------------------------------------------------------------------- */
+.local {
+  color-scheme: light;
+  background: #fff;
+  color: #0f172a;
+}
+.local :focus-visible {
+  outline-color: #0b57d0;
+}
+
+/* selects: our own chevron, set in from the right edge */
+.select-pv {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2390D8F0' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.1rem center;
+  background-size: 16px 16px;
+  padding-right: 3rem !important;
+}
+
+/* section backgrounds: generated art, kept quiet behind content */
+.section-art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.section-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.32;
+}
+.section-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--ink) 0%, rgba(5, 11, 36, 0.55) 22%, rgba(5, 11, 36, 0.55) 78%, var(--ink) 100%),
+    linear-gradient(90deg, var(--ink) 0%, rgba(5, 11, 36, 0.4) 55%, rgba(5, 11, 36, 0.1) 100%);
+}
+/* Routine Run cards keep their own type on the light /local/ pages too */
+.rr-card h3.rr-title {
+  font-family: 'Inter Tight', 'Manrope', -apple-system, system-ui, sans-serif;
+  font-weight: 600 !important;
+  font-size: clamp(1.5rem, 3vw, 1.9rem) !important;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #fff;
+}
+
+/* Small text links keep their look but get a finger-sized target on touch screens */
+@media (pointer: coarse) {
+  .hit {
+    position: relative;
+  }
+  .hit::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    right: -6px;
+    top: 50%;
+    height: 44px;
+    transform: translateY(-50%);
+  }
+}

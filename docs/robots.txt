@@ -1,10 +1,33 @@
-# robots.txt for premavision.net
-
+# premavision.net
+# Search engines and AI assistants are welcome: everything here is public.
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://premavision.net/sitemap.xml
+User-agent: GPTBot
+Allow: /
 
-# Crawl-delay (optional, helps with server load)
-Crawl-delay: 1
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://premavision.net/sitemap.xml
