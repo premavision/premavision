@@ -33,7 +33,7 @@ const ROUTINE_RUN: Milestone[] = [
 ];
 
 const BEFORE = [
-  ['Groupon', 'Launched the merchant booking platform from zero.', 'Getting a new product live, with real merchants on it, fast.'],
+  ['Groupon', 'Main frontend contributor on the merchant booking platform while its team grew from 2 to 8 engineers.', 'A product merchants depend on every day has to stay easy for the next engineer to change.'],
   ['Autodesk', 'Checkout for a product with 7M+ users, a system under real load.', 'Respect for the invisible failure: in billing it shows up on an invoice, weeks later.'],
   ['BigPanda', 'AI incident tooling for enterprise on-call teams.', 'Noisy input quietly breaks every decision below it, so the signal gets fixed first.']
 ];

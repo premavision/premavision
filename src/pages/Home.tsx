@@ -298,7 +298,7 @@ export default function Home() {
               <p className="mt-1 text-[15px] text-ice">Co-owner · design and client experience</p>
               <p className="mt-3 text-[15px] leading-6 text-slate-300">
                 Product experience, behavioural design and creative direction; tests every build with real people.
-                Co-founder, Go-to-Market and Creative Direction at Routine Run.
+                Co-founder, Sales &amp; Distribution at Routine Run.
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-5">
                 <LinkedInLink href={SITE.linkedinVictoria} />

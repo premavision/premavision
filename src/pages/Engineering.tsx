@@ -149,7 +149,7 @@ export default function Engineering() {
           </li>
           <li className="glass rounded-2xl p-4">
             Before AI: checkout at Autodesk for a product with 7M+ users, AI incident tooling at BigPanda for enterprise
-            on-call teams, and Groupon's merchant booking platform launched from zero.
+            on-call teams, and the frontend of Groupon's merchant booking platform.
           </li>
         </ul>
         <ProofLinks

@@ -63,9 +63,9 @@ export default function About() {
                   around it, and takes it all the way to production.
                 </p>
                 <p>
-                  Behind that are 15+ years of launching products from zero, like Groupon's merchant booking platform,
-                  and of building systems that carry real load: checkout for Autodesk's 7M+ users, and AI incident
-                  tooling at BigPanda that on-call teams at large enterprises rely on.
+                  Behind that are 15+ years of production software: the frontend of Groupon's merchant booking platform,
+                  checkout for Autodesk's 7M+ users, and AI incident tooling at BigPanda that on-call teams at large
+                  enterprises rely on.
                 </p>
                 <p>
                   In 2026 he founded Routine Run, a platform that turns the processes people carry in their heads into
@@ -116,7 +116,7 @@ export default function About() {
                 </p>
                 <p>
                   She is often the first person you talk to, and she tests builds with real people before a client
-                  sees them. At Routine Run she is Co-founder, Go-to-Market and Creative Direction, and runs the App
+                  sees them. At Routine Run she is co-founder in charge of sales and distribution, and runs the App
                   Clip pilots around Palm Coast.
                 </p>
                 <p>
