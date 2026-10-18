@@ -1,6 +1,6 @@
 # Facebook Page: Prema Vision (17 Oct 2026)
 
-Live: https://www.facebook.com/premavision (page id 61592978470172). Created 17 Oct 2026 with the setup below. Victoria Von (facebook.com/victoria.v.von) invited with Facebook access, no full control (invite sent 17 Oct 2026, expires in 30 days). Pending: the first post (attach og/facebook-post.jpg).
+Live: https://www.facebook.com/premavision (page id 61592978470172). Created 17 Oct 2026 with the setup below. Victoria Von (facebook.com/victoria.v.von) invited with Facebook access, no full control (invite sent 17 Oct 2026, expires in 30 days). First post prepared with og/facebook-post.jpg; Denys publishes it.
 
 Status: no Prema Vision Page existed under Denys's profile on 17 Oct 2026 (Pages he manages: Fly Under Water, Florida For Fun). facebook.com/premavision looked free.
 
@@ -10,11 +10,11 @@ Status: no Prema Vision Page existed under Denys's profile on 17 Oct 2026 (Pages
 - Categories: Software Company, Information Technology Company
 - Website: https://premavision.net
 - Email: denys@premavision.net
-- Phone: (407) 867-9870
+- Phone: none on the Page (removed 17 Oct 2026); people write through Messenger
 - Location: Palm Coast, FL (no street address; Facebook's service area takes only cities and neighbourhoods, so "across the US" lives in the text)
 - Action button: Contact us, opening https://premavision.net/contact/
 - Profile picture: og/facebook-profile.png (1080x1080, the diamond logo on navy; source og/facebook-profile.html)
-- Cover: og/facebook-cover.png (1640x624; source og/facebook-cover.html)
+- Cover: og/facebook-cover.png (1640x624; source og/facebook-cover.html). Phones show only the middle 16:9, so text and diagram sit in x 330 to 1340
 - Post image: og/facebook-post.jpg (rendered from og/og-source.html; public/og/premavision.jpg is older and still says "Mobile apps with AI inside")
 
 ## Bio (90 of 101 characters)
