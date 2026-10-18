@@ -1,6 +1,6 @@
 # Facebook Page: Prema Vision (17 Oct 2026)
 
-Live: https://www.facebook.com/premavision (page id 61592978470172). Created 17 Oct 2026 with the setup below. Pending: the first post (attach og/facebook-post.jpg) and Facebook access for Victoria.
+Live: https://www.facebook.com/premavision (page id 61592978470172). Created 17 Oct 2026 with the setup below. Victoria Von (facebook.com/victoria.v.von) invited with Facebook access, no full control (invite sent 17 Oct 2026, expires in 30 days). Pending: the first post (attach og/facebook-post.jpg).
 
 Status: no Prema Vision Page existed under Denys's profile on 17 Oct 2026 (Pages he manages: Fly Under Water, Florida For Fun). facebook.com/premavision looked free.
 
