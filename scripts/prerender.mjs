@@ -47,6 +47,7 @@ const ORG = {
     'Prema Vision designs and builds AI systems for companies and takes them to production: AI inside iPhone and Apple Watch apps, AI interviews and expert systems, AI in operations, and the engineering underneath, with retainers for AI oversight.',
   address: { '@type': 'PostalAddress', addressLocality: 'Palm Coast', addressRegion: 'FL', addressCountry: 'US' },
   areaServed: 'US',
+  sameAs: ['https://www.linkedin.com/company/premavision/', 'https://www.facebook.com/premavision'],
   founder: { '@id': 'https://korolkov.pro/#denys' },
   employee: [{ '@id': 'https://korolkov.pro/#denys' }, { '@id': `${ORIGIN}/about/#victoria` }],
   knowsAbout: [
