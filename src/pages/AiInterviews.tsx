@@ -148,7 +148,7 @@ export default function AiInterviews() {
             </h2>
             <div className="mt-5 text-lg leading-8 text-slate-300">
               Structed is an AI interview platform that already exists and runs: it talks to the client for you and
-              hands back a detailed project brief after one interview, a back office where experts change the agent and publish without a developer, and
+              brings back a detailed brief for any marketing project, a back office where experts change the agent and publish without a developer, and
               an MCP server for AI assistants. Denys built it as CTO. When it fits your conversation, we set it up and
               connect it to your business instead of building a new one: weeks instead of months, and a fraction of the
               cost.
@@ -219,7 +219,7 @@ export default function AiInterviews() {
             Built first in Structed
           </span>
         }
-        lead="Structed, which Denys built as CTO, talks to the client for you and turns one interview into a detailed project brief, even when they can't quite explain what they need. These are the engineering results."
+        lead="Structed, which Denys built as CTO, talks to the client for you and brings back a detailed brief for any marketing project, even when they struggle to explain what they need. These are the engineering results."
       >
         <div className="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
           <Stat value="18 of 19" label="facts the interview used to drop, now recovered" href={PROOF.linkedinExperience} />
