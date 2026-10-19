@@ -111,7 +111,7 @@ export default function Work() {
         <div className="mt-6 grid gap-12 lg:grid-cols-[1.4fr_1fr]">
           <div>
             <p className="max-w-2xl text-[17px] leading-8 text-slate-300">
-              Structed turns one AI-led client interview into a clear, structured set of requirements, even when the
+              Structed talks to the client for you and turns one interview into a detailed project brief, even when the
               client can't quite explain what they need. Experts run it themselves: they edit the domain taxonomy in a
               sandbox, test it and publish to production with no developer. Engineering ran as one engineer working with
               AI agents: Claude Code and Copilot on the repository's instructions and 28 skills, with AI code review in

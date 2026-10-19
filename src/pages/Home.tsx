@@ -209,9 +209,8 @@ export default function Home() {
               <span className="ml-2 text-[14px] font-normal text-slate-400">built as CTO</span>
             </h3>
             <p className="mt-3 text-[16px] leading-7 text-slate-300">
-              One AI-led interview turns what a client carries in their head into a structured set of requirements,
-              even when they can't quite explain what they need. Experts change the agent and publish without a
-              developer.
+              Structed talks to the client for you and turns one interview into a detailed project brief, even when
+              they can't quite explain what they need. Experts change the agent and publish without a developer.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3">
               <Stat value="18 of 19" label="dropped facts recovered" href={PROOF.linkedinExperience} />
