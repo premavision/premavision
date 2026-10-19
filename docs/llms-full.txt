@@ -42,8 +42,8 @@ Contact: denys@premavision.net, https://premavision.net/contact/
 
 ## AI interview packages
 Start with Structed (structed.ai), the AI interview platform Denys built as CTO, set up and integrated when it fits; build custom when it doesn't.
-- Structed, set up for your domain (2 to 3 weeks, from $4,800): Your professions, the questions your experts ask, the sections your requirements need and the rules for what counts as an answer, configured in Structed's back office and tested on simulated clients built from your real cases.
-- Structed, connected to your systems (2 to 4 weeks, from $6,500): Interview links go out from your own flows, and finished requirements land where your team works: your CRM, helpdesk or project tool, through the API, webhooks or MCP.
+- Structed, set up for your domain (2 to 3 weeks, from $4,800): Your professions, the questions your experts ask, the sections your brief needs and the rules for what counts as an answer, configured in Structed's back office and tested on simulated clients built from your real cases.
+- Structed, connected to your systems (2 to 4 weeks, from $6,500): Interview links go out from your own flows, and finished briefs land where your team works: your CRM, helpdesk or project tool, through the API, webhooks or MCP.
 - Expertise map (1 week, $2,400, credited to the build): We interview your experts and write down what they ask, in what order, and how they decide. Useful on its own: it is the onboarding doc nobody had time to write.
 - AI interviewer, live (5 to 7 weeks, from $18,000): An agent that runs the conversation your expert would run, by link with no account, and ends with structured requirements your team and your AI tools can work from.
 - Expert back office (3 to 4 weeks, from $9,000): The people who own the knowledge change what the agent asks and knows. They edit in a sandbox, test on simulated clients, publish, and roll back in one click.

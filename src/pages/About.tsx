@@ -70,8 +70,8 @@ export default function About() {
                 <p>
                   In 2026 he founded Routine Run, a platform that turns the processes people carry in their heads into
                   ones that run, on the phone and the wrist, and through an API and MCP for other systems and AI
-                  assistants. As CTO of Structed he designed and built an AI interview that turns what a client knows into
-                  structured requirements, selected for the Grishin Robotics accelerator.
+                  assistants. As CTO he designed and built Structed, an AI that talks to the client and brings back a detailed
+                  brief for any marketing project, selected for the Grishin Robotics accelerator.
                 </p>
                 <p>
                   He leads every Prema Vision project: designs the system, makes the technical calls, and reviews

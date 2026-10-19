@@ -131,8 +131,8 @@ export default function Home() {
               <li>· A person approves anything that can't be undone</li>
             </ul>
             <p className="mt-6 rounded-2xl bg-white/5 p-4 text-[14px] leading-6 text-slate-300">
-              <strong className="text-white">Already running in Structed</strong>, which we can set up for your domain instead
-              of building from scratch: facts clients gave stopped going missing
+              <strong className="text-white">Already running in Structed</strong>, which talks to your client and brings back a
+              detailed brief. We can set it up for your domain instead of building from scratch: facts clients gave stopped going missing
               (18 of 19 recovered), and replies went from 20–60 seconds to 1–13.
             </p>
             <div className="mt-7">
@@ -280,8 +280,8 @@ export default function Home() {
               <p className="mt-1 text-[15px] text-ice">Co-owner · lead engineer</p>
               <p className="mt-3 text-[15px] leading-6 text-slate-300">
                 15+ years shipping production software, from Groupon's merchant booking platform to checkout for
-                Autodesk's 7M+ users and BigPanda's AI incident tooling. Founder of Routine Run; built Structed's AI
-                interview as CTO. Leads every project and reviews what ships.
+                Autodesk's 7M+ users and BigPanda's AI incident tooling. Founder of Routine Run; as CTO built Structed,
+                the AI that interviews a client and brings back the brief. Leads every project and reviews what ships.
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-5">
                 <LinkedInLink href={SITE.linkedinDenys} />

@@ -11,14 +11,14 @@ export const STRUCTED_PACKAGES: Package[] = [
     time: '2 to 3 weeks',
     price: 'from $4,800',
     highlight: true,
-    body: 'Your professions, the questions your experts ask, the sections your requirements need and the rules for what counts as an answer, configured in Structed\'s back office and tested on simulated clients built from your real cases.',
+    body: 'Your professions, the questions your experts ask, the sections your brief needs and the rules for what counts as an answer, configured in Structed\'s back office and tested on simulated clients built from your real cases.',
     includes: ['Your experts trained to change it and publish without a developer', 'A working interviewer in weeks, not months']
   },
   {
     name: 'Structed, connected to your systems',
     time: '2 to 4 weeks',
     price: 'from $6,500',
-    body: 'Interview links go out from your own flows, and finished requirements land where your team works: your CRM, helpdesk or project tool, through the API, webhooks or MCP.',
+    body: 'Interview links go out from your own flows, and finished briefs land where your team works: your CRM, helpdesk or project tool, through the API, webhooks or MCP.',
     includes: ['AI assistants can start and read interviews over MCP', 'Every handoff logged, nothing copied by hand']
   }
 ];
@@ -147,9 +147,9 @@ export default function AiInterviews() {
               Start with Structed, not from scratch
             </h2>
             <div className="mt-5 text-lg leading-8 text-slate-300">
-              Structed is an AI interview platform that already exists and runs: it talks to the client for you and
-              brings back a detailed brief for any marketing project, a back office where experts change the agent and publish without a developer, and
-              an MCP server for AI assistants. Denys built it as CTO. When it fits your conversation, we set it up and
+              Structed is an AI interview platform that already exists and runs. It talks to the client for you and
+              brings back a detailed brief for any marketing project. Experts change the agent in a back office and
+              publish without a developer, and an MCP server opens it to AI assistants. Denys built it as CTO. When it fits your conversation, we set it up and
               connect it to your business instead of building a new one: weeks instead of months, and a fraction of the
               cost.
             </div>
