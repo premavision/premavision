@@ -181,7 +181,7 @@ export default function Mobile() {
         <div className="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
           <Stat value="60+" label="App Intents" href={PROOF.rrIntents} />
           <Stat value="10" label="Siri phrases, 5 of them on the Watch" href={PROOF.rrSiri} />
-          <Stat value="2,200+" label="automated tests" href={PROOF.linkedinExperience} />
+          <Stat value="Open" label="method, API and MCP server on GitHub" href={PROOF.rrRepo} />
           <Stat value="67 ms" label="day's schedule on a real phone" note="was 8.5 s" href={PROOF.linkedinExperience} />
         </div>
         <ul className="mt-8 grid gap-3 text-[15px] leading-6 text-slate-300 md:grid-cols-2">

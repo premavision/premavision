@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             <div className="mt-12 border-t border-white/[0.08] pt-6">
               <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-slate-500">
-                15+ years of production software · built first in our own products
+                18+ years of production software · built first in our own products
               </p>
               <ul className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-3 text-[17px] font-semibold tracking-tight text-slate-400">
                 <li>Groupon</li>
@@ -187,7 +187,7 @@ export default function Home() {
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3">
               <Stat value="60+" label="App Intents for Siri, Shortcuts and the Action button" href={PROOF.rrIntents} />
-              <Stat value="2,200+" label="automated tests" href={PROOF.linkedinExperience} />
+              <Stat value="Open" label="method, API and MCP server on GitHub" href={PROOF.rrRepo} />
               <Stat value="67 ms" label="to compute the day's schedule on a real phone" note="was 8.5 s" href={PROOF.linkedinExperience} />
               <Stat value="MCP" label="connector listed in Claude's directory" href={PROOF.rrAssistants} />
             </div>
@@ -216,7 +216,7 @@ export default function Home() {
               <Stat value="18 of 19" label="dropped facts recovered" href={PROOF.linkedinExperience} />
               <Stat value="1–13 s" label="per reply" note="was 20–60 s" href={PROOF.linkedinExperience} />
               <Stat value="¼ fewer" label="turns per interview, no topic asked twice" href={PROOF.linkedinExperience} />
-              <Stat value="1,400+" label="automated tests" href={PROOF.linkedinExperience} />
+              <Stat value="100+" label="specializations across 16 professions, as data, not code" href={PROOF.linkedinExperience} />
             </div>
             <ProofLinks
               links={[
@@ -279,7 +279,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-white">Denys Korolkov</h3>
               <p className="mt-1 text-[15px] text-ice">Co-owner · lead engineer</p>
               <p className="mt-3 text-[15px] leading-6 text-slate-300">
-                15+ years shipping production software, from Groupon's merchant booking platform to checkout for
+                18+ years shipping production software, from Groupon's merchant booking platform to checkout for
                 Autodesk's 7M+ users and BigPanda's AI incident tooling. Founder of Routine Run; as CTO built Structed,
                 the AI that interviews a client and brings back the brief. Leads every project and reviews what ships.
               </p>

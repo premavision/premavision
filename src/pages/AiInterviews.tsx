@@ -225,11 +225,11 @@ export default function AiInterviews() {
           <Stat value="18 of 19" label="facts the interview used to drop, now recovered" href={PROOF.linkedinExperience} />
           <Stat value="1–13 s" label="per reply" note="was 20–60 s" href={PROOF.linkedinExperience} />
           <Stat value="¼ fewer" label="turns, with no topic asked twice" href={PROOF.linkedinExperience} />
-          <Stat value="1,400+" label="automated tests" href={PROOF.linkedinExperience} />
+          <Stat value="18 nodes" label="in the LangGraph interview agent" href={PROOF.linkedinExperience} />
         </div>
         <p className="mt-8 max-w-3xl text-[16px] leading-7 text-slate-300">
-          16 professions and their specializations live as versioned data, not code, so a new domain doesn't need a
-          rewrite. Experts edit the taxonomy in a sandbox, test it, and publish to production without a developer.
+          16 professions and 100+ specializations live as versioned data, not code, so a new domain doesn't need a
+          rewrite: marketing is live, IT consulting is in closed beta, and more domains are coming. Experts edit the taxonomy in a sandbox, test it, and publish to production without a developer.
         </p>
         <ProofLinks
           links={[

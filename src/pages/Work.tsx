@@ -18,7 +18,7 @@ const STRUCTED: Milestone[] = [
 ];
 
 const ROUTINE_RUN: Milestone[] = [
-  { when: 'August 2026', what: 'Routine Run founded. The method Denys carried for years becomes a native Apple app: the engine and App Intents first.' },
+  { when: 'August 2026', what: 'Routine Run founded. The method Denys carried for years gets its first form, a native iPhone and Apple Watch app: the engine and App Intents first.' },
   { when: '16 September 2026', what: 'Public beta builds on TestFlight, with every build described in plain words.', href: PROOF.rrChanges },
   { when: '19 September 2026', what: 'Private iCloud sync, earlier versions of every routine, and support back to iOS 26.1 and watchOS 26.' },
   { when: '22 September 2026', what: 'A real PagerDuty page started an on-call runbook on the Lock Screen and the Watch, about two seconds from event to decision.', href: PROOF.rrOnCall },
@@ -33,7 +33,7 @@ const ROUTINE_RUN: Milestone[] = [
 ];
 
 const BEFORE = [
-  ['Groupon', 'Main frontend contributor on the merchant booking platform while its team grew from 2 to 8 engineers.', 'A product merchants depend on every day has to stay easy for the next engineer to change.'],
+  ['Groupon', 'Launched the merchant booking platform from zero with a small team of developers.', 'A product merchants depend on every day has to stay easy for the next engineer to change.'],
   ['Autodesk', 'Checkout for a product with 7M+ users, a system under real load.', 'Respect for the invisible failure: in billing it shows up on an invoice, weeks later.'],
   ['BigPanda', 'AI incident tooling for enterprise on-call teams.', 'Noisy input quietly breaks every decision below it, so the signal gets fixed first.']
 ];
@@ -80,7 +80,7 @@ export default function Work() {
           <div className="h-fit lg:sticky lg:top-28">
             <div className="grid grid-cols-2 gap-3">
               <Stat value="60+" label="App Intents" href={PROOF.rrIntents} />
-              <Stat value="2,200+" label="automated tests" href={PROOF.linkedinExperience} />
+              <Stat value="Open" label="method, API and MCP server on GitHub" href={PROOF.rrRepo} />
               <Stat value="67 ms" label="day's schedule on a real phone" note="was 8.5 s" href={PROOF.linkedinExperience} />
               <Stat value="~2 s" label="from a PagerDuty event to Routine Run's decision" href={PROOF.rrOnCall} />
             </div>
@@ -124,7 +124,7 @@ export default function Work() {
               <Stat value="18 of 19" label="dropped facts recovered" href={PROOF.linkedinExperience} />
               <Stat value="1–13 s" label="per reply" note="was 20–60 s" href={PROOF.linkedinExperience} />
               <Stat value="¼ fewer" label="turns per interview" href={PROOF.linkedinExperience} />
-              <Stat value="1,400+" label="automated tests" href={PROOF.linkedinExperience} />
+              <Stat value="100+" label="specializations across 16 professions, as data, not code" href={PROOF.linkedinExperience} />
             </div>
             <ProofLinks
               links={[
@@ -140,7 +140,7 @@ export default function Work() {
       </Section>
 
       <Section
-        eyebrow="Before AI · 15+ years"
+        eyebrow="Before AI · 18+ years"
         title="Three systems that carried real load"
         lead="What you get from them is judgement about where things break."
       >

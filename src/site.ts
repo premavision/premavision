@@ -108,7 +108,7 @@ export const MAIN_ROUTES: RouteMeta[] = [
     priority: 0.8,
     title: 'Work and proof: Routine Run and Structed · Prema Vision',
     description:
-      'What Prema Vision sells was built first in our own products: Routine Run, an iPhone and Apple Watch platform with 60+ App Intents, and the Structed AI interview.'
+      'What Prema Vision sells was built first in our own products: Routine Run, a process execution platform that starts on iPhone and Apple Watch, with 60+ App Intents, and the Structed AI interview.'
   },
   {
     path: '/about/',

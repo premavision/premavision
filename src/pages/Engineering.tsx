@@ -41,7 +41,7 @@ export const ENG_PACKAGES: Package[] = [
     name: 'AI coding agents set up for your repository',
     time: '1 to 2 weeks',
     price: 'from $3,500',
-    body: 'Claude Code, Codex or Copilot working from your repository\'s own instructions and skills, with AI code review on every pull request and tests that catch what the agent gets wrong. How Structed\'s engineering shipped 1,400+ tests with one engineer.',
+    body: 'Claude Code, Codex or Copilot working from your repository\'s own instructions and skills, with AI code review on every pull request and tests that catch what the agent gets wrong. Structed\'s engineering ran this way with one engineer.',
     includes: ['Instructions and skills written for your codebase', 'AI review and tests in CI, and a session with your team']
   },
   {
@@ -132,7 +132,7 @@ export default function Engineering() {
       <Section
         eyebrow="Proof"
         title="Done before, on systems with real stakes"
-        lead="15+ years of production software, and two products of our own run the way we would run yours."
+        lead="18+ years of production software, and two products of our own run the way we would run yours."
       >
         <ul className="mt-8 grid gap-3 text-[15px] leading-6 text-slate-300 md:grid-cols-2">
           <li className="glass rounded-2xl p-4">
@@ -149,7 +149,7 @@ export default function Engineering() {
           </li>
           <li className="glass rounded-2xl p-4">
             Before AI: checkout at Autodesk for a product with 7M+ users, AI incident tooling at BigPanda for enterprise
-            on-call teams, and the frontend of Groupon's merchant booking platform.
+            on-call teams, and Groupon's merchant booking platform, launched from zero with a small team.
           </li>
         </ul>
         <ProofLinks

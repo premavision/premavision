@@ -130,7 +130,7 @@ function Hero({ kicker, title, children }: { kicker: string; title: string; chil
           <figcaption className="p-5">
             <p className="text-lg font-bold text-slate-900">Denys Korolkov</p>
             <p className="mt-1 text-base leading-relaxed text-slate-700">
-              Software engineer, 15+ years. I live in Palm Coast and help local businesses get found, answer every call
+              Software engineer, 18+ years. I live in Palm Coast and help local businesses get found, answer every call
               and run smoother.
             </p>
           </figcaption>
@@ -301,7 +301,7 @@ function LocalFooter() {
             <img src="/logo-64.webp" alt="" width={32} height={32} className="h-8 w-8" />
             Denys Korolkov · Prema Vision LLC
           </p>
-          <p>Software engineer, 15+ years. I live in Palm Coast and help businesses in Flagler, Volusia and St. Johns counties.</p>
+          <p>Software engineer, 18+ years. I live in Palm Coast and help businesses in Flagler, Volusia and St. Johns counties.</p>
           <p>
             <a href={SITE.phoneHref} className="font-semibold text-white underline underline-offset-4">
               {SITE.phoneDisplay}
@@ -686,7 +686,7 @@ export function LocalWebsites() {
 
       <Block title="Honest about where I am">
         <p>
-          I have built software for 15+ years, including at Autodesk and BigPanda, and in 2026 I built a production AI
+          I have built software for 18+ years, including at Autodesk and BigPanda, and in 2026 I built a production AI
           interview system as CTO. What I do not yet have is a wall of local logos, because I started working with
           businesses here in 2026.
         </p>
@@ -786,7 +786,7 @@ export function LocalAutomation() {
 
       <Block title="Why me">
         <p>
-          Fifteen-plus years building software, most of it the unglamorous kind that has to keep working while people
+          Eighteen-plus years building software, most of it the unglamorous kind that has to keep working while people
           depend on it. In 2026 I built a production AI system that holds conversations with clients, as CTO, and I live
           in Palm Coast.
         </p>

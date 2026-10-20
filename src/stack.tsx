@@ -64,7 +64,7 @@ export function StackSection({ compact = false }: { compact?: boolean }) {
   return (
     <Section
       eyebrow="Stack and expertise"
-      title={compact ? 'What we build with' : '15+ years of backend, now AI engineering'}
+      title={compact ? 'What we build with' : '18+ years of backend, now AI engineering'}
       lead={
         compact
           ? 'Every item below is something we have shipped to production, and the line under each group says where.'

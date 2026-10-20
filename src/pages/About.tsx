@@ -20,7 +20,7 @@ const WORK_MODEL = [
   ],
   [
     'AI agents',
-    'Coding agents write and test code on the project\'s own instructions and skills, with AI code review on every change in CI. Structed\'s engineering ran this way with one engineer, and shipped with 1,400+ automated tests.'
+    'Coding agents write and test code on the project\'s own instructions and skills, with AI code review on every change in CI. Structed\'s engineering ran this way with one engineer.'
   ],
   [
     'Specialists, when the scope needs them',
@@ -63,7 +63,7 @@ export default function About() {
                   around it, and takes it all the way to production.
                 </p>
                 <p>
-                  Behind that are 15+ years of production software: the frontend of Groupon's merchant booking platform,
+                  Behind that are 18+ years of production software: launching Groupon's merchant booking platform from zero,
                   checkout for Autodesk's 7M+ users, and AI incident tooling at BigPanda that on-call teams at large
                   enterprises rely on.
                 </p>
@@ -79,7 +79,7 @@ export default function About() {
                 </p>
                 <ul className="grid grid-cols-2 gap-3 pt-2 sm:grid-cols-4">
                   {[
-                    ['15+', 'years in production software'],
+                    ['18+', 'years in production software'],
                     ['7M+', 'users on the Autodesk system he worked on'],
                     ['60+', 'App Intents in Routine Run'],
                     ['2', 'AI products built from a blank page']
@@ -116,8 +116,8 @@ export default function About() {
                 </p>
                 <p>
                   She is often the first person you talk to, and she tests builds with real people before a client
-                  sees them. At Routine Run she is co-founder in charge of sales and distribution, and runs the App
-                  Clip pilots around Palm Coast.
+                  sees them. At Routine Run she is co-founder in charge of sales and distribution. She made its brand, from the
+                  logo and visual style to “Your head is for decisions”, and runs the App Clip pilots around Palm Coast.
                 </p>
                 <p>
                   <LinkedInLink href={SITE.linkedinVictoria} />
