@@ -176,7 +176,7 @@ export default function Mobile() {
             Built first in Routine Run
           </span>
         }
-        lead="Routine Run is Denys's own platform for processes people carry in their heads. Its app is in public beta, and it is where every package above was built and tested first."
+        lead="Routine Run is Denys's own platform for processes people carry in their heads. Its app is on the App Store, and it is where every package above was built and tested first."
       >
         <div className="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
           <Stat value="60+" label="App Intents" href={PROOF.rrIntents} />
@@ -204,7 +204,7 @@ export default function Mobile() {
         </ul>
         <ProofLinks
           links={[
-            ['Try it on TestFlight', PROOF.testflight],
+            ['Get it on the App Store', PROOF.appStore],
             ['App Intents', PROOF.rrIntents],
             ['Siri', PROOF.rrSiri],
             ['PagerDuty to the Watch', PROOF.rrOnCall],

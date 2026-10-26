@@ -102,7 +102,7 @@ export const Stat = ({ value, label, note, href }: { value: string; label: strin
 /* Where every claim can be checked. Keep these to public pages only. */
 export const PROOF = {
   rrHome: 'https://routinerun.com/',
-  rrBeta: 'https://routinerun.com/beta',
+  appStore: 'https://apps.apple.com/app/id6812338054',
   rrIntents: 'https://routinerun.com/app-intents',
   rrSiri: 'https://routinerun.com/siri',
   rrOnCall: 'https://routinerun.com/on-call',
@@ -119,8 +119,7 @@ export const PROOF = {
   structedMilestones: 'https://korolkov.pro/notes/#structed-milestones',
   demoDay: 'https://korolkov.pro/notes/#four-weeks-to-demo-day',
   grishin: 'https://grishinrobotics.com/accelerator',
-  grishinLinkedIn: 'https://www.linkedin.com/company/grishinrobotics/',
-  testflight: 'https://routinerun.com/beta'
+  grishinLinkedIn: 'https://www.linkedin.com/company/grishinrobotics/'
 };
 
 export const ProofLinks = ({ links }: { links: [string, string][] }) => (

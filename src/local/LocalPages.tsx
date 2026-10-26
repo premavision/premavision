@@ -23,7 +23,7 @@ const LINKS = [
   { path: '/local/check/', label: 'Website check' }
 ];
 
-export const TESTFLIGHT = 'https://routinerun.com/beta';
+export const APP_STORE = 'https://apps.apple.com/app/id6812338054';
 
 function LocalHeader({ current }: { current: string }) {
   return (
@@ -323,8 +323,8 @@ function LocalFooter() {
         </ul>
         <ul className="space-y-2 text-base">
           <li>
-            <a href={TESTFLIGHT} className="text-slate-200 underline-offset-4 hover:text-white hover:underline">
-              Try Routine Run on TestFlight
+            <a href={APP_STORE} className="text-slate-200 underline-offset-4 hover:text-white hover:underline">
+              Get Routine Run on the App Store
             </a>
           </li>
           <li>
@@ -822,8 +822,8 @@ export function LocalAppClips() {
         <p>
           It runs on Routine Run, the app I built. Your staff can use the same steps as
           checklists on the phone or the Watch.{' '}
-          <a href={TESTFLIGHT} className="font-semibold text-[#0B6FA4] underline underline-offset-4">
-            Try Routine Run on TestFlight
+          <a href={APP_STORE} className="font-semibold text-[#0B6FA4] underline underline-offset-4">
+            Get Routine Run on the App Store
           </a>
           .
         </p>
@@ -901,8 +901,8 @@ export function LocalAppClips() {
             through steps.
           </li>
           <li>
-            <strong>Where it stands:</strong> the App Clip is in TestFlight now. A printed code opens it on anybody's
-            phone once Routine Run is on the App Store. Pilot partners are set up first.
+            <strong>Where it stands:</strong> Routine Run and its App Clip have been on the App Store since 25 October 2026.
+            Pilot partners are set up first.
           </li>
         </ul>
       </Block>

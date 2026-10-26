@@ -27,8 +27,8 @@ const ROUTINE_RUN: Milestone[] = [
   { when: '2 October 2026', what: 'Assistive Access: one large step with Next and Not now. Larger Text and Reduce Motion reach every screen.', href: PROOF.rrAccess },
   { when: '4 to 5 October 2026', what: 'A routine scanned at a door opens in an App Clip with nothing to install; a routine can be published under a code, a poster or an NFC tag.', href: PROOF.rrOrgs },
   { when: '14 October 2026', what: "Connections: any system or PagerDuty can start a run through its own address. Claude and ChatGPT connect with a code, and what they write waits for the person's yes. The MCP connector is listed in Claude's directory.", href: PROOF.rrAssistants },
-  { when: 'In progress', state: 'now', what: 'Getting version 1.0 onto the App Store, for everyone.' },
-  { when: 'With the release', state: 'next', what: "App Clip pilots with local businesses: a code at the door, the steps on the visitor's phone." },
+  { when: '25 October 2026', what: 'Version 1.0 on the App Store, for everyone, on iPhone and Apple Watch.', href: PROOF.appStore },
+  { when: 'Since the release', state: 'now', what: "App Clip pilots with local businesses: a code at the door, the steps on the visitor's phone." },
   { when: 'Next', state: 'next', what: 'The same routine in any browser, then iPad and Mac, then beyond Apple.' }
 ];
 
@@ -87,7 +87,7 @@ export default function Work() {
             <ProofLinks
               links={[
                 ['routinerun.com', PROOF.rrHome],
-                ['TestFlight beta', PROOF.testflight],
+                ['App Store', PROOF.appStore],
                 ['Every build, newest first', PROOF.rrChanges],
                 ['The method', PROOF.rrMethod],
                 ['MCP connector', PROOF.rrAssistants],

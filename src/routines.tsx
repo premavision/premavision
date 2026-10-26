@@ -83,9 +83,9 @@ export function RoutineCard({ slug, intro, className = '' }: { slug: RoutineSlug
             Open in Routine Run
           </a>
           <p className="mt-3 text-[12px] leading-5 text-white/55">
-            Opens on any phone or computer. To run it, get the app on{' '}
-            <a href={PROOF.testflight} className="text-[#FF7CCB] underline-offset-2 hover:underline">
-              TestFlight
+            Opens on any phone or computer. To run it, get the app on the{' '}
+            <a href={PROOF.appStore} className="text-[#FF7CCB] underline-offset-2 hover:underline">
+              App Store
             </a>
             .
           </p>

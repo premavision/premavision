@@ -194,7 +194,7 @@ export default function Home() {
             <ProofLinks
               links={[
                 ['routinerun.com', PROOF.rrHome],
-                ['TestFlight beta', PROOF.testflight],
+                ['App Store', PROOF.appStore],
                 ['PagerDuty to the Watch', PROOF.rrOnCall],
                 ['API and MCP docs', PROOF.rrDevelopers]
               ]}
