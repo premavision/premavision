@@ -112,7 +112,7 @@ export const PROOF = {
   rrAccess: 'https://routinerun.com/accessibility',
   rrOrgs: 'https://routinerun.com/for-organisations',
   rrChanges: 'https://routinerun.com/changes',
-  rrRepo: 'https://github.com/routinerun/routine-run',
+  rrRepo: 'https://github.com/routinerun/routinerun',
   claudeDirectory: 'https://claude.ai/directory/connectors/routine-run',
   linkedinExperience: 'https://www.linkedin.com/in/denyskorolkov/details/experience/',
   structed: 'https://structed.ai/',
