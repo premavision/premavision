@@ -116,7 +116,7 @@ export const MAIN_ROUTES: RouteMeta[] = [
     priority: 0.6,
     title: 'About Prema Vision · Denys Korolkov and Victoria Von',
     description:
-      'Prema Vision LLC, Palm Coast, Florida. One accountable lead engineer, AI agents for the routine work, design by Victoria Von. Fixed price, taken to production.'
+      'Prema Vision LLC, Palm Coast, Florida. One accountable lead engineer, AI agents for the routine work, business development and design by Victoria Von. Fixed price, taken to production.'
   },
   {
     path: '/notes/',

@@ -270,7 +270,7 @@ export default function Home() {
       <Section
         eyebrow="Who you work with"
         title="One accountable lead. A team that grows with the work."
-        lead="Denys designs every project and reviews everything that ships. AI agents do the routine engineering, and when the scope needs more hands, specialists join under the same review. Victoria makes sure it works for the people who will use it."
+        lead="Denys designs every project and reviews everything that ships. AI agents do the routine engineering, and when the scope needs more hands, specialists join under the same review. Victoria leads business development, partnerships and design."
       >
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:max-w-4xl">
           <div className="glass block overflow-hidden rounded-2xl">
@@ -294,9 +294,9 @@ export default function Home() {
             <Portrait src="/img/victoria-von.webp" alt="Victoria Von" className="rounded-b-none" />
             <div className="p-6">
               <h3 className="text-xl font-semibold text-white">Victoria Von</h3>
-              <p className="mt-1 text-[15px] text-ice">Co-owner · design and client experience</p>
+              <p className="mt-1 text-[15px] text-ice">Co-owner · business development and design</p>
               <p className="mt-3 text-[15px] leading-6 text-slate-300">
-                Product experience, behavioural design and creative direction; tests every build with real people.
+                Clients, partnerships and how the work is scoped; product experience, behavioural design and brand.
                 Co-founder, Sales &amp; Distribution at Routine Run.
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-5">

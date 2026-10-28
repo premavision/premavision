@@ -107,16 +107,16 @@ export default function About() {
             <Portrait src="/img/victoria-von.webp" alt="Victoria Von" />
             <div>
               <h2 className="text-3xl font-semibold text-white">Victoria Von</h2>
-              <p className="mt-1 text-[15px] text-ice">Co-owner · design and client experience</p>
+              <p className="mt-1 text-[15px] text-ice">Co-owner · business development and design</p>
               <div className="mt-5 max-w-3xl space-y-4 text-[17px] leading-8 text-slate-300">
                 <p>
-                  Victoria leads the human side of every project: how people actually think and behave, how they use
-                  technology, and what makes them come back. Product experience and onboarding, behavioural design
-                  that survives a bad week (no streaks, no shame), brand and creative direction.
+                  Victoria leads business development and design: the first conversations with clients,
+                  partnerships, and turning what a business needs into work with a clear scope and price. She also
+                  leads product experience, behavioural design and brand, so how people will actually use a system
+                  is settled before anyone builds it.
                 </p>
                 <p>
-                  She is often the first person you talk to, and she tests builds with real people before a client
-                  sees them. At Routine Run she is co-founder in charge of sales and distribution. She made its brand, from the
+                  She is often the first person you talk to. At Routine Run she is co-founder in charge of sales and distribution. She made its brand, from the
                   logo and visual style to “Your head is for decisions”, and runs the App Clip pilots around Palm Coast.
                 </p>
                 <p>
